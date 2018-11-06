@@ -1,4 +1,5 @@
 
+
 # W3 SIMPLE
 
 ## _Keep it simple, but not simpler_
@@ -40,7 +41,7 @@ So I made this simple one.
 baseurl = "/"
 languageCode = "en-us"
 title = "Jesse Lau Blog"
-theme = "w3-simple"
+theme = "hugo-w3-simple"
 disqusShortname = "yourdisqusshortname"      # disqus_shortname
 googleAnalytics = "UA-12345678-1"      # UA-XXXXXXXX-X
 
@@ -63,6 +64,7 @@ googleAnalytics = "UA-12345678-1"      # UA-XXXXXXXX-X
 [params]
     relatedPosts = true
     description = "Jesse Lau Blog"
+    logotext = "JESSE LAU BLOG"  # Logo text 
     footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)"
 ```
 
