@@ -1,0 +1,19 @@
+{{ define "main" -}}
+ <div class="w3-content w3-card-4" >
+{{if not .IsHome }}
+
+<h1 class="w3-center">{{ .Title | markdownify }}</h1>
+{{ end }}
+
+{{ .Content }}
+
+<ul class="w3-ul w3-hoverable">
+  {{ range (where .Data.Pages "Section" "!=" "") }}
+  <li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span> &nbsp; 
+    <a href="{{ .URL }}">{{ .Title | markdownify }}</a>
+  </li>
+  {{ end }}
+</ul>
+</div>
+{{- end }}

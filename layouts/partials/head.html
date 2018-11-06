@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+{{ "<!-- Enable responsiveness on mobile devices -->" | safeHTML }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+{{ .Hugo.Generator }}
+{{ if .IsHome }}
+    {{ $.Scratch.Set "theTitle" .Site.Title }}
+{{else}}
+    {{ $.Scratch.Add "theTitle" .Title}}
+    {{ $.Scratch.Add "theTitle" " • "}}
+    {{ $.Scratch.Add "theTitle" .Site.Title}}
+{{ end }}
+<title>{{ $.Scratch.Get "theTitle" }}</title>
+{{ with .Site.Params.meta.description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/opengraph.html" . }}
+
+<!-- Permalink & RSSlink -->
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ if .RSSLink -}}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end -}}
+
+<!-- Favicon and Touch icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#5bbad5">
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{ "apple-icon-57x57.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ "apple-icon-60x60.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ "apple-icon-72x72.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ "apple-icon-76x76.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ "apple-icon-114x114.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ "apple-icon-120x120.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ "apple-icon-144x144.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ "apple-icon-152x152.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-icon-180x180.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ "android-icon-192x192.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ "favicon-96x96.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ "ms-icon-144x144.png" | relURL }}">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<!-- Styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+
+<link rel="stylesheet" href="{{ "/css/w3.css" | relURL }}" />
+<!-- custom css -->
+
+<link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+
+{{ template "_internal/google_analytics_async.html" . }}
+
+

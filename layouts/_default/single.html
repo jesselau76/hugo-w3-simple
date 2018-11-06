@@ -1,0 +1,97 @@
+{{ define "main" -}}
+
+  <div class="w3-content w3-card-4" >
+    <!-- post-header -->
+    <header class="w3-container w3-center w3-padding-32">
+      <h1>{{ .Title }}</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
+        {{ with .Params.categories -}}
+          <div >
+            {{ range . }}
+              <a class="w3-btn w3-small w3-round w3-green" href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
+            {{ end }}
+          </div>
+        {{- end }}
+       
+        
+      </div>
+    </header>
+
+   
+    <!-- Content -->
+    <div class="w3-container">
+      {{ .Content }}
+    </div>
+
+    
+   
+
+    <div class="w3-container">
+    	
+      {{ with .Params.tags -}}
+        <div class="w3-container">
+        	<hr class = "tag">
+        Tags: 
+          {{ range . }}
+          <a class="w3-btn w3-small w3-round w3-green" href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+          {{ end }}
+          <hr class = "tag">
+       
+        </div>
+      {{- end }}
+     
+	</div>
+
+    {{ if .Site.Params.relatedPosts }}
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <div class="w3-container">
+        <!-- related content -->
+        <h2>Related Articles:</h2>
+        <ul class="w3-ul w3-hoverable">
+            
+            {{ range . }}
+
+              <li class="w3-padding-large"><span class="date">{{ .Date.Format "2006/01/02" }}</span> &nbsp; <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+    {{ end }}
+    <br>  
+</div>
+      <!-- Post Pagination -->
+    <div class="w3-content" > 
+      <div class="w3-bar w3-section">
+	     {{ with .NextInSection }}
+	      <a  href="{{ .URL }}" class="w3-btn w3-text-indigo w3-hover-green">
+	          &#10094; {{ .Title }}
+	      </a>
+	    {{- end }}
+	    {{ with .PrevInSection }}
+	      <a class="w3-btn w3-right w3-text-indigo w3-hover-green" href="{{ .URL }}">
+	       {{ .Title }} &#10095;
+	      </a>
+	    {{- end }}
+  	  </div>
+    </div>
+	
+  
+
+  <!-- w3colorjs -->
+  {{ if  (.Params.w3codecolor) }}
+      
+      <script src="{{ "/js/w3codecolor-min.js" | relURL }}"></script>
+
+      <script>
+      w3CodeColor();
+      </script>
+  {{- end -}}
+
+  
+
+
+
+{{- end }}

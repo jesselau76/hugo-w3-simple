@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+<head>
+  <meta charset="utf-8">
+  {{ if eq .URL "/" }}
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:type" content="website">
+    {{ else }}
+    <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    {{ end }}
+  {{ partial "head.html" . }}
+</head>
+<body class="w3-light-grey">
+  <div class="w3-content">
+  
+    
+    <header id="header">
+        {{ partial "header.html" . }}
+    </header>
+    
+
+    
+      <div>
+        <div id="content" >
+          {{ block "main" . }}{{ end }}
+        </div>
+        {{ partial "comments.html" . }}
+      </div>
+    
+
+   
+    <footer id="footer" >
+      {{ partial "footer.html" . }}
+    </footer>
+    
+
+    
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

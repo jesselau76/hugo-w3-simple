@@ -1,0 +1,76 @@
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+<!-- author & description & keywords  -->
+<meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}" />
+
+{{- if .Description -}}
+  <meta name="description" content="{{ .Description | safeHTML }}" />
+{{ else if .IsPage }}
+  <meta name="description" content="{{ .Summary | plainify }}" />
+{{ else if .Site.Params.description }}
+  <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
+{{- end -}}
+
+{{- if .Keywords -}}
+  {{ $length := len .Keywords | add -1 -}}
+  <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
+{{ else if .Site.Params.keywords }}
+  {{ $length := len .Site.Params.keywords | add -1 -}}
+  <meta name="keywords" content="{{ range $index, $element := .Site.Params.keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
+{{- end }}
+
+
+
+<!-- Site Generator -->
+<meta name="generator" content="Hugo {{ .Hugo.Version }}" />
+
+<!-- Permalink & RSSlink -->
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ if .RSSLink -}}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end -}}
+
+<!-- Favicon and Touch icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#5bbad5">
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{ "apple-icon-57x57.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ "apple-icon-60x60.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ "apple-icon-72x72.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ "apple-icon-76x76.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ "apple-icon-114x114.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ "apple-icon-120x120.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ "apple-icon-144x144.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ "apple-icon-152x152.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-icon-180x180.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ "android-icon-192x192.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ "favicon-96x96.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ "ms-icon-144x144.png" | relURL }}">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<!-- Styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+
+<link rel="stylesheet" href="{{ "/css/w3.css" | relURL }}" />
+<!-- custom css -->
+
+<link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+
+{{ template "_internal/google_analytics_async.html" . }}

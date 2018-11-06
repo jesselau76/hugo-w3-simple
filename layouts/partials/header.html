@@ -1,0 +1,35 @@
+
+  <div class="w3-container w3-center w3-padding-32 w3-hide-small"> 
+      <h1 class="w3-xxxlarge w3-text-blue w3-wide w3-allerta" style="text-shadow:1px 1px 0 #444" ><u>JESSE LAU BLOG</u></h1>
+      
+    </div>
+    <div class="w3-content w3-center">
+    <div class="w3-bar w3-light-grey w3-border">
+    <a href="{{ "/" | relURL }}" class="w3-bar-item w3-button w3-large w3-green"><i class="fa fa-home"></i></a>
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}" class="w3-bar-item w3-button w3-hide-small">{{ .Name }}</a>
+      {{ end }}
+   
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="displaymenu()">&#9776;</a>
+  </div>
+
+<div id="mobilemenu" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium">
+  {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}" class="w3-bar-item w3-button">{{ .Name }}</a>
+      {{ end }}
+  
+</div>
+</div>
+<script>
+function displaymenu() {
+    var x = document.getElementById("mobilemenu");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+    
+    <hr class="headfoot">
+   
