@@ -25,13 +25,50 @@ So I made this simple one.
  - Responsive
  - W3 code color js - small and fast code highlight solution. Less than half of highlights.js. [Demo Here](https://jesselau.com/start-blogging-today/)
  
+
+
  ## Install:
  ```
  cd themes
  git clone https://github.com/jesselau76/hugo-w3-simple.git
  ```
- ## Hugo is really fast
- I just migrate my site from Wordpress to static page.
+ 
+ ## How to configure?
+ It is very simple. You can edit the example **config. toml** file below
+ 
+
+```
+baseurl = "/"
+languageCode = "en-us"
+title = "Jesse Lau Blog"
+theme = "w3-simple"
+disqusShortname = "yourdisqusshortname"      # disqus_shortname
+googleAnalytics = "UA-12345678-1"      # UA-XXXXXXXX-X
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+[[menu.main]]
+    name = "Subscribe"
+    url = "/index.xml"
+
+[params]
+    relatedPosts = true
+    description = "Jesse Lau Blog"
+    footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)"
+```
+
+## Hugo is really fast
+ I just migrated my site from Wordpress to Hugo static page.
  The speed is 3 times faster.
  Here is the web page test result for Wordpress :
  ![wordpress](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/webpagetest-without-cache.png)Load Times **7.450s**
