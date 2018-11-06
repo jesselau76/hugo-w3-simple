@@ -26,14 +26,13 @@ So I made this simple one.
  - W3 code color js - small and fast code highlight solution. Less than half of highlights.js. [Demo Here](https://jesselau.com/start-blogging-today/)
  
 
-
- ## Install:
+## Install:
  ```
  cd themes
  git clone https://github.com/jesselau76/hugo-w3-simple.git
  ```
  
- ## How to configure?
+## How to configure?
  It is very simple. You can edit the example **config. toml** file below
  
 
