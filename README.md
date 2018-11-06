@@ -16,4 +16,24 @@ I can't help to want to migrate Wordpress to Hugo. But I found W3 basic theme wa
 
 So I made this simple one.
 
+## Screenshot
 
+![W3 Simple](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/screenshot.png)![Jesse Lau Blog](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/tn.png)
+## Features:
+
+ - W3.css - small and fast
+ - Responsive
+ - W3 code color js - small and fast code highlight solution. Less than half of highlights.js. [Demo Here](https://jesselau.com/start-blogging-today/)
+ 
+ ## Install:
+ ```
+ cd themes
+ git clone https://github.com/jesselau76/hugo-w3-simple.git
+ ```
+ ## Hugo is really fast
+ I just migrate my site from Wordpress to static page.
+ The speed is 3 times faster.
+ Here is the web page test result for Wordpress :
+ ![wordpress](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/webpagetest-without-cache.png)Load Times **7.450s**
+ And here is the new test with same page:
+ ![hugo](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/webpagetest-hugo.png)The load times is **1.962s** now!
