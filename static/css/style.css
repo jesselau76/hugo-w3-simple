@@ -55,6 +55,9 @@ img, iframe, video {
     margin-right: auto;
     }
 main { hyphens: auto; }
+
+/* custom blockquote */
+
 blockquote {
     margin: 20px 0 30px;
     border-left: #2EA3F2 5px solid;
@@ -66,7 +69,15 @@ blockquote p {
   
 }
 
-{{ if .Site.Params.socialshare }}
+/* change em to color red */
+
+em {
+   
+   font-style: normal;
+   color:red;
+}
+
+/* social share css */
 
   @media screen and (min-width: 1024px)
   {
@@ -126,4 +137,5 @@ blockquote p {
   border-radius: 0px 0px 15px 15px;
   }
 
-  {{ end }}
+ 
+  
