@@ -101,7 +101,7 @@ blockquote p {
   .bookmark {
   background: #bb0000;
   color: white;
-  -webkit-border-radius: 12px 12px 0 0;
+  
 }
 
 
@@ -123,7 +123,7 @@ blockquote p {
   .linkedin {
   background: #007bb5;
   color: white;
-  -webkit-border-radius: 0 0 12px 12px;
+  
   }
 
   {{ end }}
