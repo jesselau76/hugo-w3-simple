@@ -66,6 +66,16 @@ blockquote p {
   
 }
 
+.pdfobject-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 800px;
+  margin: 2em 0;
+}
+
+.pdfobject { border: solid 1px #666; }
+
+
 @media screen and (min-width: 1024px)
 {
 .icon-bar {
