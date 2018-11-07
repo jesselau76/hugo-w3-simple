@@ -24,11 +24,17 @@ So I made this simple one.
 
  - W3.css - small and fast
  - Responsive
- - W3 code color js - small and fast code highlight solution. Less than half of highlights.js. [Demo Here](https://jesselau.com/start-blogging-today/)
+ - W3 code color js - small and fast code highlight solution. The file size is less than half of highlights.js. [Demo Here](https://jesselau.com/start-blogging-today/)
+ - Facebook Open Graph
+ - Twitter Card
+ - Google Analytics
+ - Disqus
+ - One Signal Push
+ - Social share & Bookmark bar
  
 
 ## Install:
- ```
+ ```bash
  cd themes
  git clone https://github.com/jesselau76/hugo-w3-simple.git
  ```
@@ -37,7 +43,7 @@ So I made this simple one.
  It is very simple. You can edit the example **config. toml** file below
  
 
-```
+```bash
 baseurl = "/"
 languageCode = "en-us"
 title = "Jesse Lau Blog"
@@ -57,15 +63,15 @@ googleAnalytics = "UA-12345678-1"      # UA-XXXXXXXX-X
     name = "Tags"
     url = "/tags/"
     weight = 4
-[[menu.main]]
-    name = "Subscribe"
-    url = "/index.xml"
+
 
 [params]
     relatedPosts = true
+    socialshare = true
     description = "Jesse Lau Blog"
-    logotext = "JESSE LAU BLOG"  # Logo text 
-    footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)"
+    onesignalid = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"  #one signal push app id
+    logotext = "JESSE LAU BLOG" # logo text
+    footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)  | [RSS](/index.xml)"
 ```
 
 ## Hugo is really fast
@@ -75,3 +81,4 @@ googleAnalytics = "UA-12345678-1"      # UA-XXXXXXXX-X
  ![wordpress](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/webpagetest-without-cache.png)Load Times **7.450s**
  And here is the new test with same page:
  ![hugo](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/webpagetest-hugo.png)The load times is **1.962s** now!
+
