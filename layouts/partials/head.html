@@ -25,8 +25,8 @@
 {{ end -}}
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
-<link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
+<link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
 
 
 
@@ -40,6 +40,21 @@
 
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
 
+<!-- One Signal Push -->
+{{ with .Site.Params.onesignalid }}        
+      
+      
+	<link rel="manifest" href="{{ "/manifest.json" | relURL }}" />
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	  var OneSignal = window.OneSignal || [];
+	  OneSignal.push(function() {
+	    OneSignal.init({
+	      appId: "{{ . }}",
+	    });
+	  });
+</script>
+{{ end }}
 {{ template "_internal/google_analytics_async.html" . }}
 
 
