@@ -1,5 +1,6 @@
 
 
+
 # W3 SIMPLE
 
 ## _Keep it simple, but not simpler_
@@ -24,13 +25,14 @@ So I made this simple one.
 
  - W3.css - small and fast
  - Responsive
- - W3 code color js - small and fast code highlight solution. The file size is less than half of highlights.js. [Demo Here](https://jesselau.com/start-blogging-today/)
- - Facebook Open Graph
+ - W3 code color js - small and fast code highlight solution. The file size is less than half of highlights.js. [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)
+ - Open Graph
  - Twitter Card
  - Google Analytics
  - Disqus
  - One Signal Push
  - Social share & Bookmark bar
+ - Shortcodes:Info, Warning, Colorcode.  [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)
  
 
 ## Install:
