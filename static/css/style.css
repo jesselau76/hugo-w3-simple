@@ -84,7 +84,7 @@ em {
 
 /* social share css */
 
-  @media screen and (min-width: 1024px)
+  @media screen and (min-width: 1025px)
   {
   .icon-bar {
     position: fixed;
@@ -94,7 +94,7 @@ em {
     transform: translateY(-50%);
   }
   }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px) {
   .icon-bar {
     position: relative;
     
