@@ -6,8 +6,8 @@ license = "MIT"
 licenselink = "https://github.com/jesselau76/hugo-w3-simple/blob/master/LICENSE"
 description = "A simple theme for Hugo, powered by W3.css"
 homepage = "https://github.com/jesselau76/hugo-w3-simple"
-tags = ["minimal", "blog", "personal", "clean", "simple", "starter", "minimalist","Responsive", "Disqus", "Google Analytics","font-awesome","syntax highlighting","mobile"]
-features = ["blog", "theme", "syntax highlighting", "font-awesome", "responsive", "disqus"]
+tags = ["minimal", "blog", "search", "clean", "simple", "starter", "minimalist","Responsive", "Disqus", "font-awesome","syntax highlighting"]
+features = ["blog", "syntax highlighting"]
 min_version = "0.41"
 
 [author]
