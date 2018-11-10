@@ -1,23 +1,22 @@
 
 
 
-# W3 SIMPLE
+# Hugo W3 SIMPLE
 
 ## _Keep it simple, but not simpler_
 
 
-**W3 Simple** is a Hugo theme written by [Jesse Lau](https://jesselau.com) . The main motivation for writing this theme was to provide a really minimal theme with W3 CSS included. 
+**Hugo W3 Simple** is a Hugo theme written by [Jesse Lau](https://jesselau.com) . The main motivation for writing this theme was to provide a really minimal theme with W3 CSS included. 
 
 
 ## Screenshot
 
-![W3 Simple](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/screenshot.png)![Jesse Lau Blog](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/tn.png)
+![Hugo W3 Simple](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/screenshot.png)![Jesse Lau Blog](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/tn.png)
 ## Features:
 
  - W3.css - small and fast
  - Responsive
- - W3 code color js - small and fast code highlight solution. The file size is less than half of highlights.js. [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)
- - Open Graph
+ - W3 code color js - small and fast code highlight solution. 
  - Twitter Card
  - Google Analytics
  - Disqus
@@ -37,12 +36,13 @@
  
 
 ```bash
-baseurl = "/"
+baseurl = "https://example.org/"
 languageCode = "en-us"
-title = "Jesse Lau Blog"
+title = "Hugo W3 Simple Theme"
 theme = "hugo-w3-simple"
-disqusShortname = "yourdisqusshortname"      # disqus_shortname
-googleAnalytics = "UA-12345678-1"      # UA-XXXXXXXX-X
+disqusShortname = ""      # disqus_shortname
+googleAnalytics = ""      # UA-XXXXXXXX-X
+
 
 [[menu.main]]
     name = "About"
@@ -61,9 +61,9 @@ googleAnalytics = "UA-12345678-1"      # UA-XXXXXXXX-X
 [params]
     relatedPosts = true
     socialshare = true
-    description = "Jesse Lau Blog"
-    onesignalid = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"  #one signal push app id
-    logotext = "JESSE LAU BLOG" # logo text
+    searchfunction = false #If you need search button and you have search function please set true
+    description = "Hugo W3 Simple Theme"
+    onesignalid = ""  #one signal push app id
+    logotext = "HUGO W3 SIMPLE" # logo text
     footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)  | [RSS](/index.xml)"
-```
 

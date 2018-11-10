@@ -14,8 +14,11 @@
     <a href="{{ "/" | relURL }}" class="w3-bar-item w3-button w3-large w3-green"><i class="fa fa-home"></i></a>
     {{ range .Site.Menus.main }}
       <a href="{{ .URL | relURL }}" class="w3-bar-item w3-button w3-hide-small">{{ .Name }}</a>
-      {{ end }}
+    {{ end }}
    
+    {{ if .Site.Params.searchfunction }}
+       <a href="javascript:void(0)" class="w3-bar-item w3-button w3-large" onclick="displaysearch()"><i class="fa fa-search"></i></a>
+    {{ end }}
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="displaymenu()">&#9776;</a>
   </div>
 
@@ -36,6 +39,36 @@ function displaymenu() {
     }
 }
 </script>
+
+{{ if .Site.Params.searchfunction }}
+
+  <div id="searchOverlay" class="overlay w3-hide">
+    <span class="closebtn" onclick="displaysearch()" title="Close Overlay">×</span>
+    <div class="overlay-content">
+        <form action="/search/">
+          <input type="text" placeholder="Search.." name="q">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+  </div>
+
+  <script>
+  function displaysearch() {
+    var x = document.getElementById("searchOverlay");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+      
+  }
+
+ 
+  </script>
+
+  
+{{ end }}
+
     
     <hr class="headfoot">
    

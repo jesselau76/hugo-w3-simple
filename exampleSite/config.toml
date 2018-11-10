@@ -1,0 +1,30 @@
+baseurl = "https://example.org/"
+languageCode = "en-us"
+title = "Hugo W3 Simple Theme"
+theme = "hugo-w3-simple"
+disqusShortname = ""      # disqus_shortname
+googleAnalytics = ""      # UA-XXXXXXXX-X
+
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+
+
+[params]
+    relatedPosts = true
+    socialshare = true
+    searchfunction = false #search function is not included in example site because it need server-side app. To see the demo please visit https://jesselau.com
+    description = "Hugo W3 Simple Theme"
+    onesignalid = ""  #one signal push app id
+    logotext = "HUGO W3 SIMPLE" # logo text
+    footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)  | [RSS](/index.xml)"

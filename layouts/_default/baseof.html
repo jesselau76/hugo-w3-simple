@@ -1,3 +1,4 @@
+{{ block "customphp" . }}{{ end }}
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
 <head>
@@ -10,7 +11,9 @@
   
     
     <header id="header">
+      {{ block "customheader" . }}   
         {{ partial "header.html" . }}
+      {{ end }}
     </header>
     
 
@@ -19,7 +22,10 @@
         <div id="content" >
           {{ block "main" . }}{{ end }}
         </div>
-        {{ partial "comments.html" . }}
+        {{ block "commentornotes" . }}   
+          {{ partial "comments.html" . }}
+        {{ end }}
+        
       </div>
     
 

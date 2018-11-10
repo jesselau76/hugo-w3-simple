@@ -548,7 +548,7 @@ function w3CodeColorize(x, lang) {
     } else if (typ == "bash") {
       words = ["sudo", "git", "hugo", "cd", "rm", "mkdir", "delete", "find", "ssh", "scp", "nano", "server", "root", "nginx", "rsync", "bash",
       "chmod", "echo", "print", "apt-get", "ls", "which", "touch", "python", "go", "php", "chown", "du", "dhclient", "journalctl", "systemctl", "service", "tar",
-      "zip", "unzip", "cp", "mv", "curl", "wget", "dpkg"];
+      "zip", "unzip", "cp", "mv", "curl", "wget", "dpkg", "pip", "install", "pip3", "mysql"];
     }
     for (i = 0; i < words.length; i++) {
       if (typ == "php" || typ == "sql") {
