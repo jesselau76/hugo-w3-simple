@@ -64,6 +64,19 @@ function gosearch() {
 
  <div id="searchresult" class="w3-content w3-card-4" >
   {{ "<?php" | safeHTML }}
+  if (mysqli_num_rows($result)==0)
+  { 
+  	?>
+  	<div class="w3-panel w3-pale-yellow w3-display-container">
+	  <span onclick="this.parentElement.style.display='none'"
+	  class="w3-button w3-large w3-display-topright">&times;</span>
+	  <h3>No Results!</h3>
+	  <p>There are no posts about <b>{{ "<?php echo $q;?> " | safeHTML }}</b>. Please try another keywords.</p>
+	</div>
+  {{ "<?php" | safeHTML }}
+   }
+   else
+   {
     foreach($result as $row)
     {
       ?>
@@ -84,6 +97,7 @@ function gosearch() {
     {{ "<?php" | safeHTML }}
      
     }
+}
     ?>
   
 </div>
