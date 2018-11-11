@@ -68,3 +68,24 @@ googleAnalytics = ""      # UA-XXXXXXXX-X
     logotext = "HUGO W3 SIMPLE" # logo text
     footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)  | [RSS](/index.xml)"
 
+## Favicon
+
+In order to customize the favicon you need to place the `favicon.ico` file in the static folder at the root of your site, which will overwrite those files in the themes/even/static/ folder.
+
+
+## Update Theme
+
+```bash
+cd  themes/hugo-w3-simple/
+git pull
+```
+
+## License
+
+Released under the [MIT](https://github.com/jesselau76/hugo-w3-simple/blob/master/LICENSE) License.
+
+## Acknowledgements
+
+- [Hugo Xmin](https://github.com/yihui/hugo-xmin)
+- [Even](https://github.com/olOwOlo/hugo-theme-even)
+- [Mediumish](https://github.com/lgaida/mediumish-gohugo-theme)
