@@ -14,8 +14,4 @@ min_version = "0.41"
   name = "Jesse Lau"
   homepage = "https://jesselau.com/"
 
-# If porting an existing theme
-[original]
-  name = "XMin"
-  homepage = "https://xmin.yihui.name/"
-  repo = "https://github.com/yihui/hugo-xmin"
+
