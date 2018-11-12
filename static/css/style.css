@@ -41,16 +41,8 @@ a:hover {
     color: green;
   }
 /* code */
-pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
-  padding: 1em;
-  overflow-x: auto;
-  font-size: 13px;
-font-family: Consolas,Monaco,Menlo,monospace;
-}
-code { background: #f9f9f9; }
-pre code { background: none; }
+.w3-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;overflow-x:auto;word-wrap:break-word;}
+
 
 /* misc elements */
 img, iframe, video { 
