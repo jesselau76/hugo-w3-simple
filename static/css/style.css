@@ -43,7 +43,7 @@ a:hover {
 /* code */
 .w3-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;overflow-x:auto;word-wrap:break-word;}
 
-
+code { color:crimson;background-color:#f9f9f9;padding-left:4px;padding-right:4px; }
 /* misc elements */
 img, iframe, video { 
     max-width: 100%; 
