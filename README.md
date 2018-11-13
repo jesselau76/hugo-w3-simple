@@ -76,7 +76,7 @@ paginate = 12 #gridstyle use 3 column. so should be 3,6,9,12,15....
     onesignalid = ""  #one signal push app id
     logotext = "HUGO W3 SIMPLE" # logo text
     footer = "&copy; [Jesse Lau](https://jesselau.com) 2018 | [Github](https://github.com/jesselau76) | [Twitter](https://twitter.com/jesselau2)  | [RSS](/index.xml)"
-    
+```    
 
 ## Favicon
 
