@@ -1,0 +1,50 @@
+# ===== title =====
+tags:
+  other: "Tags"
+
+categories:
+  other: "Categories"
+
+# ===== footer =====
+powered:
+  other: "Powered by %s"
+
+theme:
+  other: "Theme"
+
+# ===== post =====
+prevPage:
+  other: "Prev"
+
+nextPage:
+  other: "Next"
+
+prevPost:
+  other: "Prev"
+
+nextPost:
+  other: "Next"
+
+toc:
+  other: "Contents"
+
+readMore:
+  other: "Read more.."
+
+wordCount:
+  one: "{{ .Count }} word"
+  other: "{{ .Count }} words"
+
+readingTime:
+  one: "{{ .Count }} min read"
+  other: "{{ .Count }} mins read"
+
+
+# ===== content license =====
+author:
+  other: "Author"
+
+license:
+  other: "License"
+
+
