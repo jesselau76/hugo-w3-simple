@@ -2,7 +2,7 @@
 author: admin
 date: 2018-11-09T07:26:15+13:00
 draft: false
-title: W3 Simple Theme Shortcodes Demo
+title: Hugo W3 Simple Theme Shortcodes Demo
 type: post
 url: /w3-simple-shortcodes-demo/
 w3codecolor: true
@@ -10,7 +10,6 @@ categories:
 - Website Programming
 tags:
 - hugo
-thumb-jad-limcaco-183877-unsplash.jpg
 ---
 
 
@@ -189,3 +188,7 @@ y = json.loads(x)<br>
 # the result is a Python dictionary:<br>
 print(y["age"]) <br>
 {{< /colorcode >}}  
+
+
+## Test first picture without thumbnail set
+![Thanks to Unsplash](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/exampleSite/images/thumb-jad-limcaco-183877-unsplash.jpg)

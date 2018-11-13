@@ -3,8 +3,7 @@
 {{if not .IsHome }}
 <h1 class="w3-center">{{ .Title | markdownify }}</h1>
 {{ end }}
-{{ $paginator := .Paginate (where .Pages "Type" "post") }}
-
+{{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
 
 {{ if  .Site.Params.gridstyle }}
 <!-- grid list style -->
