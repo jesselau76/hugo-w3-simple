@@ -62,6 +62,7 @@ blockquote {
     margin: 20px 0 30px;
     border-left: #2EA3F2 5px solid;
     padding-left: 20px;
+    line-height: 2em;
 }
 blockquote p {
     padding-bottom: 0px;
@@ -205,9 +206,6 @@ em {
 }
   
 /* pagination */
-.center {
-    text-align: center;
-}
 
 .pagination {
     display: inline-block;
