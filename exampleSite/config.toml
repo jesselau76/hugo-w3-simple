@@ -4,7 +4,7 @@ title = "Hugo W3 Simple Theme"
 theme = "hugo-w3-simple"
 disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
-
+paginate = 12 #gridstyle use 3 column. so should be 3,6,9,12,15....
 
 [[menu.main]]
     name = "About"
@@ -22,6 +22,9 @@ googleAnalytics = ""      # UA-XXXXXXXX-X
 
 [params]
     relatedPosts = true
+    gridstyle = true  # list post with grid style. If false then simple list
+    readingtime = true  #display reading time
+    firstpic = true  # display first picture as thumbnail if no thumbnail set. For gridstyle only
     socialshare = true
     searchfunction = false #search function is not included in example site because it need server-side app. To see the demo please visit https://jesselau.com
     description = "Hugo W3 Simple Theme"

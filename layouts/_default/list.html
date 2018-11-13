@@ -1,19 +1,94 @@
 {{ define "main" -}}
  <div class="w3-content w3-card-4" >
 {{if not .IsHome }}
-
 <h1 class="w3-center">{{ .Title | markdownify }}</h1>
 {{ end }}
+{{ $paginator := .Paginate (where .Pages "Type" "post") }}
 
-{{ .Content }}
+
+{{ if  .Site.Params.gridstyle }}
+<!-- grid list style -->
+
+
+{{ range $i, $e:= $paginator.Pages }}
+	{{ if modBool $i 3 }}
+		<div class="w3-row  w3-section">
+	{{ end }}
+  <div class="w3-col w3-container w3-section m12 l4 ">
+    <div class="w3-card-2 w3-hover-shadow " >
+    	{{ with .Params.thumbnail }}
+	    <div class="w3-hover-opacity"><img src="{{ relURL . }}" alt="Thumbnail" /></div>
+	    {{ else }}
+	    {{ if .Site.Params.firstpic}}
+	    {{ $img := findRE "<img .*?>" .Content 1 }}
+	    {{ range $img }}
+	    <div class="w3-hover-opacity">{{ (print . ) | safeHTML }}</div>
+	    {{ end }}
+	    {{ end }}
+	{{ end }}
+    <header class="w3-container wraptext w3-text-indigo">
+      <h4>{{ .Title | markdownify }}</h4>
+      
+             
+    </header>
+
+    <div class="w3-container wraptext w3-white">
+    	<code> {{ .Date.Format "2006/01/02" }} </code>
+            
+          
+    	{{ if gt (len .Summary) 200 }}
+
+  
+  		<p>{{slicestr .Summary 0 200 }}</p>
+  
+  
+		{{ end }}
+      
+    </div>
+
+    <footer >
+      <a href="{{ .URL }}"><button class="w3-button w3-blue w3-block w3-hover-green">Read More</button></a>
+    </footer>
+  </div>
+  </div>
+  {{ if or (modBool (add $i 1) 3) (ge (add $i 1) $paginator.Pages) }}
+		</div>
+	{{ end }}
+
+{{ end }} 
+
+{{ else }}  
+
+<!-- simple list style -->
 
 <ul class="w3-ul w3-hoverable">
-  {{ range (where .Data.Pages "Section" "!=" "") }}
+
+
+
+{{ range $paginator.Pages }}
   <li>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span> &nbsp; 
     <a href="{{ .URL }}">{{ .Title | markdownify }}</a>
   </li>
-  {{ end }}
+{{ end }} 
+{{ end }}
 </ul>
+
 </div>
+
+<br>
+<div class="w3-content" > 
+      <div class="w3-bar w3-section">
+
+	{{ with $paginator.Prev -}}
+  <a href="{{ .URL }}" class="w3-btn w3-text-indigo w3-hover-green">&#10094; Previous</a>
+    {{- end }}
+    {{ with $paginator.Next -}}
+  <a href="{{ .URL }}" class="w3-btn w3-right w3-text-indigo w3-hover-green">Next &#10095;</a>
+    {{- end }}
+</div>
+</div>
+
 {{- end }}
+
+

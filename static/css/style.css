@@ -45,6 +45,8 @@ a:hover {
 
 code { color:crimson;background-color:#f9f9f9;padding-left:4px;padding-right:4px; }
 /* misc elements */
+.wraptext{word-wrap:break-word}
+
 img, iframe, video { 
     max-width: 100%; 
     height:auto;
@@ -72,7 +74,7 @@ blockquote p {
 em {
    
    font-style: normal;
-   color:red;
+   color:crimson;
 }
 
 /* social share css */
