@@ -1,0 +1,33 @@
+
+{{ define "main" }}
+
+
+<script src="{{ "/js/w3.js" | relURL }}"></script>
+<div class="w3-container w3-card-4">
+{{.Content}}
+
+<p>Search for a post title in the input field or click table header to sort posts. Please note this function is just searching titles. If you need <code>full text search</code> function please click search button above.</p>
+
+<p>
+<input oninput="w3.filterHTML('#id01', '.item', this.value)" class="w3-input" placeholder="Search for posts..">
+</p>
+<div style="overflow-x:auto;">
+<table id="id01" class="w3-table-all w3-hoverable">
+  <tr class="w3-green" style="white-space:nowrap;">
+    <th onclick="w3.sortHTML('#id01', '.item', 'td:nth-child(1)')" style="cursor:pointer">Title <i class="fa fa-sort" style="font-size:13px;"></i></th>
+    <th onclick="w3.sortHTML('#id01', '.item', 'td:nth-child(2)')" style="cursor:pointer">Publication&nbsp;Date <i class="fa fa-sort" style="font-size:13px;"></i>&nbsp;&nbsp;</th>
+    <th onclick="w3.sortHTMLbyNumber('#id01', '.item', 'td:nth-child(3)')" style="cursor:pointer">Word Count <i class="fa fa-sort" style="font-size:13px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+  {{range where .Site.Pages "Section" "posts"}}
+  <tr class="item ">
+    <td><a href="{{.Permalink}}">{{.Title}}</a></td>
+    <td>{{ .Date.Format "2006/01/02" }}</td>
+    <td>{{.WordCount}}</td>
+  </tr>
+  {{end}}
+  
+</table>
+</div>
+</div>
+{{ end }}
+
