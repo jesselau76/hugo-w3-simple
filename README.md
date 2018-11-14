@@ -33,6 +33,10 @@
  
 ![HUGO W3 SIMPLE DEVICE](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/device.png)
  
+ ### All posts in one page. With a filterable, sortable and responsive table
+ 
+![HUGO W3 SIMPLE all posts](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/allposts.png)
+ 
 
 ## Install:
  ```bash
