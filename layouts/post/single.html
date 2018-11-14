@@ -2,17 +2,17 @@
  <!-- TOC -->
     {{ if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")  }}
 
-      <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-right" style="width:200px;right:0;" id="tocSidebar">
-        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+      <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-right" style="display:none;right:0" id="tocSidebar">
+        <button class="w3-bar-item w3-button w3-large w3-right-align" onclick="w3_close()">Close &times;</button>
          
           <h3 class="w3-center">{{T "toc"}} </h3>
             {{.TableOfContents}}
          
       </div>
 
-      <div class="w3-main" style="margin-right:200px">
+      <div id="main" >
       <div class="w3-teal">
-        <button class="w3-button w3-teal w3-xlarge w3-right w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <button id="openNav" class="w3-button w3-teal w3-xlarge w3-right" onclick="w3_open()">&#9776;</button>
         
       </div>
 
@@ -110,10 +110,16 @@
 
       <script>
       function w3_open() {
+          document.getElementById("main").style.marginRight = "200px";
+          document.getElementById("tocSidebar").style.width = "200px";
           document.getElementById("tocSidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
       }
       function w3_close() {
           document.getElementById("tocSidebar").style.display = "none";
+          document.getElementById("main").style.marginRight = "0";
+          
+          document.getElementById("openNav").style.display = "inline-block";
       }
       </script>
 {{ end }}

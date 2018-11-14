@@ -240,3 +240,9 @@ em {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+/* toc */
+#TableOfContents ul{list-style-type:none;padding:0;margin:0}
+#TableOfContents ul li{padding:8px 16px;border-bottom:1px solid #ddd}
+#TableOfContents ul li:last-child{border-bottom:none}
+
