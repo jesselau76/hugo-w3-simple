@@ -18,7 +18,7 @@
     <th onclick="w3.sortHTML('#id01', '.item', 'td:nth-child(2)')" style="cursor:pointer">Publication&nbsp;Date <i class="fa fa-sort" style="font-size:13px;"></i>&nbsp;&nbsp;</th>
     <th onclick="w3.sortHTMLbyNumber('#id01', '.item', 'td:nth-child(3)')" style="cursor:pointer">Word Count <i class="fa fa-sort" style="font-size:13px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;</th>
   </tr>
-  {{range where .Site.Pages "Section" "posts"}}
+  {{range where .Site.RegularPages "Section" "posts"}}
   <tr class="item ">
     <td><a href="{{.Permalink}}">{{.Title}}</a></td>
     <td>{{ .Date.Format "2006/01/02" }}</td>
