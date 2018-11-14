@@ -66,6 +66,12 @@ paginate = 12 #gridstyle use 3 column. so should be 3,6,9,12,15....
     url = "/tags/"
     weight = 4
 
+[[menu.main]]
+    name = "All Posts"
+    url = "/allposts/"
+    weight = 5
+
+
 
 [params]
     relatedPosts = true

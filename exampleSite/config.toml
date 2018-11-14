@@ -19,6 +19,11 @@ paginate = 12 #gridstyle use 3 column. so should be 3,6,9,12,15....
     url = "/tags/"
     weight = 4
 
+[[menu.main]]
+    name = "All Posts"
+    url = "/allposts/"
+    weight = 4
+
 
 [params]
     relatedPosts = true
@@ -26,7 +31,7 @@ paginate = 12 #gridstyle use 3 column. so should be 3,6,9,12,15....
     readingtime = true  #display reading time
     firstpic = true  # display first picture as thumbnail if no thumbnail set. For gridstyle only
     socialshare = true
-    searchfunction = false #search function is not included in example site because it need server-side app. To see the demo please visit https://jesselau.com
+    searchfunction = true #If true, it will only display search button but real search function is not included in example site because it need server-side app. To see the demo please visit https://jesselau.com
     description = "Hugo W3 Simple Theme"
     onesignalid = ""  #one signal push app id
     logotext = "HUGO W3 SIMPLE" # logo text
