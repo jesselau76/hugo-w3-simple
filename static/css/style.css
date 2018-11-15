@@ -47,14 +47,13 @@ code { color:crimson;background-color:#f9f9f9;padding-left:4px;padding-right:4px
 /* misc elements */
 .wraptext{word-wrap:break-word}
 
-img, iframe, video { 
+#content img, iframe, video { 
     max-width: 100%; 
     height:auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     }
-main { hyphens: auto; }
 
 /* custom blockquote */
 

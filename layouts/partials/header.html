@@ -1,4 +1,40 @@
+<div class="w3-right ">
+<div class="w3-bar w3-light-grey  ">
+  {{ if .Site.Params.googletranslate }}
+  <span class="w3-bar-item w3-left " id="google_translate_element"></span>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+          pageLanguage: '{{ .Site.LanguageCode }}'
+        , layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT
+        , multilanguagePage: true
+      }
+      , 'google_translate_element'
+    );
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+{{ end }}
 
+  {{ if .Site.Params.searchfunction }}
+       <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-green" title="Search" onclick="displaysearch()"><i class="fa fa-search"></i></a>
+  {{ end }}
+
+  {{- range $name, $path := .Site.Params.social }}
+      {{- if $path }}
+      {{- $realName := slicestr $name 2 }}
+        
+        <a href="{{ $path | safeURL }}" class="w3-bar-item w3-button w3-hover-green"><i class="fa fa-{{ $realName }}"></i></a>
+      {{- end }}
+  {{- end }}
+  
+  
+</div>
+</div>
+<br>
+  <div class="w3-content">
+  
   <div class="w3-container w3-center w3-padding-32 w3-hide-small"> 
       <h1 class="w3-xxxlarge w3-text-blue w3-wide w3-allerta" style="text-shadow:1px 1px 0 #444" ><u>
       {{ with .Site.Params.logotext }}
@@ -16,9 +52,7 @@
       <a href="{{ .URL | relURL }}" class="w3-bar-item w3-button w3-hide-small">{{ .Name }}</a>
     {{ end }}
    
-    {{ if .Site.Params.searchfunction }}
-       <a href="javascript:void(0)" class="w3-bar-item w3-button w3-large" onclick="displaysearch()"><i class="fa fa-search"></i></a>
-    {{ end }}
+    
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="displaymenu()">&#9776;</a>
   </div>
 
@@ -27,6 +61,7 @@
       <a href="{{ .URL | relURL }}" class="w3-bar-item w3-button">{{ .Name }}</a>
       {{ end }}
   
+</div>
 </div>
 </div>
 <script>
