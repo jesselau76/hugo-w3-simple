@@ -38,7 +38,7 @@
     	{{ if gt (len .Summary) 200 }}
 
   
-  		<p>{{slicestr .Summary 0 200 }}</p>
+  		<p>{{substr .Summary 0 200 }}</p>
   
   
 		{{ end }}
