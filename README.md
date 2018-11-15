@@ -23,11 +23,12 @@
  - Social share & Bookmark bar
  - Shortcodes:Info, Warning, Colorcode.  [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)
  - Sphinx or Manticore search supported. Output xml file which can be indexed by sphinx and manticore search. Example site can not include search function because it need server-side setting. [Live Search function Demo Here](https://jesselau.com/search/)
- - Table of content on sidebar - click open & close.
+ - Table of content and back to top button on scroll.
  - Grid style and simple list style.
  - All posts in one page. With a filterable, sortable and responsive table powered by w3.js. [Live Demo Here.](https://jesselau.com/allposts/)
  - Google translate.
  - Social icon.
+ - Multilingual.
 
  ## Screenshot
 ### Grid style 
@@ -83,6 +84,7 @@ hasCJKLanguage = true # has chinese/japanese/korean ?
 
 [params]
     relatedPosts = true
+    backtotop = true
     gridstyle = true  # list post with grid style. If false then simple list
     readingtime = true  #display reading time and word count
     firstpic = true  # display first picture as thumbnail if no thumbnail set. For gridstyle only
@@ -143,5 +145,6 @@ Released under the [MIT](https://github.com/jesselau76/hugo-w3-simple/blob/maste
 - [Hugo Xmin](https://github.com/yihui/hugo-xmin)
 - [Even](https://github.com/olOwOlo/hugo-theme-even)
 - [Mediumish](https://github.com/lgaida/mediumish-gohugo-theme)
+
 
 
