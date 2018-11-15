@@ -253,3 +253,20 @@ em {
   z-index: 99;  
  
 }
+/* backtotop */
+
+#backtotop {
+ display:none;
+ z-index: 99;
+    position: fixed;
+    right: 105px;
+    bottom:200px;
+    -webkit-transform:translateX(100%) rotate(270deg);
+    transform:translateX(100%) rotate(270deg);
+  -webkit-transition: all 0.2s ease,-webkit-transform 0.6s ease;
+    transition: all 0.2s ease,-webkit-transform 0.6s ease;
+    transition: all 0.2s ease,transform 0.6s ease;
+    transition: all 0.2s ease,transform 0.6s ease,-webkit-transform 0.6s ease;
+ 
+   
+}

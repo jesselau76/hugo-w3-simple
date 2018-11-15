@@ -28,8 +28,11 @@ nextPost:
 toc:
   other: "Contents"
 
+backtotop:
+  other: "Back To Top"
+
 readMore:
-  other: "Read more.."
+  other: "Read More"
 
 wordCount:
   one: "{{ .Count }} word"
@@ -47,4 +50,12 @@ author:
 license:
   other: "License"
 
+# ===== all posts =====
+poststitle:
+  other: "Title"
 
+postsdate:
+  other: "Publication Date"
+
+postsword:
+  other: "Word Count"

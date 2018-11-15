@@ -6,7 +6,7 @@
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(
       {
-          pageLanguage: '{{ .Site.LanguageCode }}'
+          pageLanguage: 'en'
         , layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT
         , multilanguagePage: true
       }
@@ -58,7 +58,7 @@
 
 <div id="mobilemenu" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium">
   {{ range .Site.Menus.main }}
-      <a href="{{ .URL | relURL }}" class="w3-bar-item w3-button">{{ .Name }}</a>
+      <a href="{{ .URL | absLangURL | relURL }}" class="w3-bar-item w3-button">{{ .Name }}</a>
       {{ end }}
   
 </div>

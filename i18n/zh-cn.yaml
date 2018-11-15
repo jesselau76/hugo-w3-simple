@@ -29,6 +29,9 @@ nextPost:
 toc:
   other: "文章目录"
 
+backtotop:
+  other: "回到顶端"
+
 readMore:
   other: "阅读更多"
 
@@ -47,4 +50,14 @@ author:
 
 license:
   other: "许可协议"
+
+# ===== all posts =====
+poststitle:
+  other: "标题"
+
+postsdate:
+  other: "发布日期"
+
+postsword:
+  other: "帖子字数"
 
