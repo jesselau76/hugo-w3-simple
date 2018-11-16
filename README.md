@@ -83,6 +83,10 @@ hasCJKLanguage = true # has chinese/japanese/korean ?
 
 
 [params]
+    authorandlicense = true 
+    authorimgurl = "https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/exampleSite/images/johndoe.jpg" #if authorandlicense set true, this one must be set too
+    authorinfo = "<h4>Authored By John Doe</h4>"
+    licenseinfo = "<p class=\"w3-small\">John Doe, a good man living in the earth, loving building website with Hugo.<br>This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>" 
     relatedPosts = true
     backtotop = true
     gridstyle = true  # list post with grid style. If false then simple list
