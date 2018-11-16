@@ -2,7 +2,7 @@
  <!-- TOC -->
     {{ if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")  }}
 
-      <div id="toc" class="w3-dropdown-hover">
+      <div id="toc" class="w3-dropdown-hover w3-hide-small w3-hide-medium">
     <button class="w3-button w3-teal w3-xlarge">&#9776;</button>
     <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
          
@@ -17,7 +17,7 @@
 
  <!-- Back to top -->
     {{ if .Site.Params.backtotop }}
-      <div id="backtotop">
+      <div id="backtotop" class="w3-hide-small w3-hide-medium">
   
         <button onclick="topFunction()" class="w3-btn w3-red w3-large" style="width:160px">{{ T "backtotop"}}
         &rarr;</button>
@@ -40,6 +40,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   <!-- TOC -->
     {{ if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")  }}
+    
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("toc").style.display = "block";
     } else {
