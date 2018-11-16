@@ -112,6 +112,11 @@ function scrollFunction() {
      
 	</div>
 
+
+
+  
+
+
     {{ if .Site.Params.relatedPosts }}
     {{ $related := .Site.RegularPages.Related . | first 5 }}
     {{ with $related }}
@@ -130,6 +135,25 @@ function scrollFunction() {
     {{ end }}
     <br>  
 </div>
+
+<!-- Author and License -->
+{{ if .Site.Params.authorandlicense }}
+<div class="w3-container w3-card-2 w3-black">
+<div class="w3-row">
+  <div class="w3-col l2 m2 s12 w3-center">
+  
+    <img src="{{ .Site.Params.authorimgurl }}" width ="100px" class="w3-circle w3-center w3-margin-top" alt="Norway" >
+   
+  </div>
+  <div class="w3-col l10 m10 s12 ">
+  <div class = "w3-container w3-margin-top">
+    {{ .Site.Params.authorinfo | safeHTML }}
+    {{ .Site.Params.licenseinfo | safeHTML  }}
+  </div>
+  </div>
+  </div>
+</div>
+{{ end }}
       <!-- Post Pagination -->
     <div class="w3-content" > 
       <div class="w3-bar w3-section">

@@ -61,3 +61,6 @@ postsdate:
 postsword:
   other: "帖子字数"
 
+postssearch:
+  other: "搜索帖子..."
+
