@@ -5,6 +5,9 @@
   
   {{ partial "head.html" . }}
   {{ block "customseo" . }}{{ end }}
+  {{ with .Params.customheader }}
+{{ . | safeHTML }}
+{{ end }}
 </head>
 <body class="w3-light-grey">
 
@@ -37,6 +40,9 @@
 
     
   </div>
+  {{ with .Params.customfooter }}
+{{ . | safeHTML }}
+{{ end }}
 {{ if .Site.Params.socialshare }}
   {{ partial "socialshare.html" . }}
 {{ end }}
