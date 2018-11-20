@@ -9,7 +9,7 @@
       <sphinx:attr name="pubDate" type="timestamp"/>
       
     </sphinx:schema>
-    {{ range $i, $e:= .Pages }}
+    {{ range $i, $e:= where .Site.AllPages "Kind" "page" }}
     <sphinx:document id="{{ add $i 1080 }} ">
       <title><![CDATA[{{ .Title }}]]></title>
       <link><![CDATA[{{ .Permalink }}]]></link>
