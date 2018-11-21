@@ -1,7 +1,11 @@
 {{ define "customphp" -}}
   {{ "<?php" | safeHTML }}
-    
-  $q = $_GET['q'];
+  if (isset($_GET['q']) && $_GET['q'] != '') {
+  
+  $q =$_GET['q'];
+} 
+  
+ 
   $manticore = new mysqli("127.0.0.1", "", "", "", 9306);
   $q=$manticore->real_escape_string($q);
   $sphinxQl="SELECT * ,SNIPPET(content,'".$q."','limit=200') as snippet FROM hugo WHERE MATCH('".$q."')";
