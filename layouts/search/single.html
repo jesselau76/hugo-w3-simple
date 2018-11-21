@@ -1,5 +1,6 @@
 {{ define "customphp" -}}
   {{ "<?php" | safeHTML }}
+  $q = '';
   if (isset($_GET['q']) && $_GET['q'] != '') {
   
   $q =$_GET['q'];
