@@ -40,6 +40,75 @@
 
     
   </div>
+
+  <!-- Back to top -->
+    {{ if .Site.Params.backtotop }}
+      <div id="backtotop" class="w3-hide-small w3-hide-medium">
+  
+        <button onclick="topFunction()" class="w3-btn w3-red w3-large" style="width:160px">{{ T "backtotop"}}
+        &rarr;</button>
+        
+      </div>
+
+      <script>
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+      </script>
+
+
+    {{ end }}
+
+    <!-- scroll indicator -->
+    {{ if .Site.Params.scrollindicator }}
+      <div class="progress-container" id="scrollbar">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>  
+
+
+    {{ end }}
+<script>
+// When the user scrolls down 50px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  <!-- TOC -->
+    {{ if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")  }}
+    
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("toc").style.display = "block";
+    } else {
+        document.getElementById("toc").style.display = "none";
+    }
+    {{ end }}
+<!-- Back to top -->
+    {{ if .Site.Params.backtotop }}
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("backtotop").style.display = "block";
+    } else {
+        document.getElementById("backtotop").style.display = "none";
+    }
+    {{ end }}
+    <!-- scroll indicator -->
+    {{ if .Site.Params.scrollindicator }}
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("scrollbar").style.display = "block";
+        } else {
+            document.getElementById("scrollbar").style.display = "none";
+        }
+    
+
+    {{ end }}
+}
+
+
+</script>
+
   {{ with .Params.customfooter }}
 {{ . | safeHTML }}
 {{ end }}

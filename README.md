@@ -3,6 +3,7 @@
 
 
 
+
 # Hugo W3 SIMPLE
 
 ## _Keep it simple, but not simpler_
@@ -29,6 +30,8 @@
  - Google translate.
  - Social icon.
  - Multilingual.
+ - Glowing style logo
+ - Scroll indicator
 
  ## Screenshot
 ### Grid style 
@@ -89,6 +92,8 @@ hasCJKLanguage = true # has chinese/japanese/korean ?
     licenseinfo = "<p class=\"w3-small\">John Doe, a good man living in the earth, loving building website with Hugo.<br>This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>" 
     relatedPosts = true
     backtotop = true
+    glowlogo = true # if want logo to have glowing style, set true.
+    scrollindicator = true # if need scroll indicator on the top, set true
     gridstyle = true  # list post with grid style. If false then simple list
     readingtime = true  #display reading time and word count
     firstpic = true  # display first picture as thumbnail if no thumbnail set. For gridstyle only

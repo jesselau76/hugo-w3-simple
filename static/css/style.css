@@ -270,3 +270,39 @@ em {
  
    
 }
+
+/* glowing logo */
+.glow {
+  
+  
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #DD4132, 0 0 40px #DD4132, 0 0 50px #DD4132, 0 0 60px #DD4132, 0 0 70px #DD4132;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #9E1030, 0 0 50px #9E1030, 0 0 60px #9E1030, 0 0 70px #9E1030, 0 0 80px #9E1030;
+  }
+}
+/* scroll indicator */
+.progress-container {
+display:none;
+position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #f44336;
+  width: 0%;
+}

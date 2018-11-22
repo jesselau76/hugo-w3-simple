@@ -15,51 +15,7 @@
       </div>
     {{ end }}
 
- <!-- Back to top -->
-    {{ if .Site.Params.backtotop }}
-      <div id="backtotop" class="w3-hide-small w3-hide-medium">
-  
-        <button onclick="topFunction()" class="w3-btn w3-red w3-large" style="width:160px">{{ T "backtotop"}}
-        &rarr;</button>
-        
-      </div>
-
-      <script>
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-      }
-      </script>
-
-
-    {{ end }}
-<script>
-// When the user scrolls down 50px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  <!-- TOC -->
-    {{ if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")  }}
-    
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("toc").style.display = "block";
-    } else {
-        document.getElementById("toc").style.display = "none";
-    }
-    {{ end }}
-<!-- Back to top -->
-    {{ if .Site.Params.backtotop }}
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("backtotop").style.display = "block";
-    } else {
-        document.getElementById("backtotop").style.display = "none";
-    }
-    {{ end }}
-}
-
-
-</script>
-
+ 
      
 
 
