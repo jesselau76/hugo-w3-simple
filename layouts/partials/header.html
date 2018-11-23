@@ -48,7 +48,7 @@
     </div>
     <div class="w3-content w3-center">
     <div class="w3-bar w3-light-grey w3-border">
-    <a href="{{ "/" | absLangURL | relURL }}" class="w3-bar-item w3-button w3-large w3-green"><i class="fa fa-home"></i></a>
+    <a href="{{ "/" | relLangURL  }}" class="w3-bar-item w3-button w3-large w3-green"><i class="fa fa-home"></i></a>
     {{ range .Site.Menus.main }}
       <a href="{{ .URL |  relURL }}" class="w3-bar-item w3-button w3-hide-small">{{ .Name }}</a>
     {{ end }}

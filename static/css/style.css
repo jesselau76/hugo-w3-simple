@@ -277,17 +277,17 @@ em {
 .glow {
   
   
-  -webkit-animation: glow 3s ease-in-out infinite alternate;
-  -moz-animation: glow 3s ease-in-out infinite alternate;
-  animation: glow 3s ease-in-out infinite alternate;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
   from {
-     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #DD4132, 0 0 40px #DD4132, 0 0 50px #DD4132, 0 0 60px #DD4132, 0 0 70px #DD4132;
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFD662, 0 0 40px #DD4132, 0 0 50px #DD4132, 0 0 60px #FFD662, 0 0 70px #DD4132;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #9E1030, 0 0 50px #9E1030, 0 0 60px #9E1030, 0 0 70px #9E1030, 0 0 80px #9E1030;
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6B5B95, 0 0 50px #6B5B95, 0 0 60px #6B5B95, 0 0 70px #6B5B95, 0 0 80px #6B5B95;
   }
 }
 /* scroll indicator */
