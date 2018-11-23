@@ -79,6 +79,8 @@ em {
 
 /* social share css */
 
+.w3-tooltip:hover .w3-text{z-index: 1;display:inline-block}
+
   @media screen and (min-width: 1025px)
   {
   .icon-bar {
@@ -93,9 +95,32 @@ em {
   @media screen and (max-width: 1024px) {
   .icon-bar {
     position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right:auto;
     
   }
+
+  .icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+   .bookmark {
   
+  border-radius: 36px   0px 0px 36px!important ;
+}
+
+ .linkedin {
+  
+  border-radius: 0px  36px 36px 0px!important;
+  }
+
   }
 
   .icon-bar a {
@@ -308,3 +333,5 @@ position: fixed;
   background: #f44336;
   width: 0%;
 }
+
+
