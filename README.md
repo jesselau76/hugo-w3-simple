@@ -22,7 +22,7 @@
  - Disqus
  - One Signal Push
  - Social share & Bookmark bar
- - Shortcodes:Info, Warning, Colorcode.  [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)
+ - Shortcodes:Info, Warning, Colorcode, quote.  [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)
  - Sphinx or Manticore search supported. Output xml file which can be indexed by sphinx and manticore search. Example site can not include search function because it need server-side setting. [Live Search function Demo Here](https://jesselau.com/search/)
  - Table of content and back to top button on scroll.
  - Grid style and simple list style.

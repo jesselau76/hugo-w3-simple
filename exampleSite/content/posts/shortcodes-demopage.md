@@ -188,7 +188,58 @@ y = json.loads(x)<br>
 # the result is a Python dictionary:<br>
 print(y["age"]) <br>
 {{< /colorcode >}}  
+<hr>
 
+## quote shortcode
+
+We can display quotes with shortcodes
+
+{{< colorcode title="Code for quote shortcodes">}}  
+{{&lt; quote  &gt;}}<br>  
+&lt;p class=" w3-xlarge"&gt;<br> 
+     Make it as simple as possible, but not simpler.<br> 
+&lt;/p&gt;<br> 
+&lt;p class="w3-right"&gt;--- Albert Einstein&lt;/p&gt;<br> 
+{{&lt; /quote &gt;}}  
+{{< /colorcode >}}  
+It will display quote with default width 100% style:  
+{{< quote  >}}  
+<p class=" w3-xlarge">
+     Make it as simple as possible, but not simpler.
+</p><p class="w3-right">--- Albert Einstein</p>
+{{< /quote >}}  
+
+You can also set width with shortcodes:
+ {{< colorcode title="Code for quote shortcodes with % width">}}  
+{{&lt; quote width="38.2%"  &gt;}}<br>  
+&lt;p class=" w3-xlarge"&gt;<br> 
+     Make it as simple as possible, but not simpler.<br> 
+&lt;/p&gt;<br> 
+&lt;p class="w3-right"&gt;--- Albert Einstein&lt;/p&gt;<br> 
+{{&lt; /quote &gt;}}  
+{{< /colorcode >}}  
+{{< quote width="38.2%" >}}  
+<p class=" w3-xlarge">
+     Make it as simple as possible, but not simpler.
+</p><p class="w3-right">--- Albert Einstein</p>
+{{< /quote >}}   
+
+Or you can set px to width
+
+{{< colorcode title="Code for quote shortcodes with px width">}}  
+{{&lt; quote width="300px"  &gt;}}<br>  
+&lt;p class=" w3-xlarge"&gt;<br> 
+     Make it as simple as possible, but not simpler.<br> 
+&lt;/p&gt;<br> 
+&lt;p class="w3-right"&gt;--- Albert Einstein&lt;/p&gt;<br> 
+{{&lt; /quote &gt;}}  
+{{< /colorcode >}}  
+
+{{< quote width="300px" >}}  
+<p class=" w3-xlarge">
+     Make it as simple as possible, but not simpler.
+</p><p class="w3-right">--- Albert Einstein</p>
+{{< /quote >}}   
 
 ## Test first picture without thumbnail set
 ![Thanks to Unsplash](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/exampleSite/images/thumb-jad-limcaco-183877-unsplash.jpg)
