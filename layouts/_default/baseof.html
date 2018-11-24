@@ -25,6 +25,9 @@
         <div id="content" >
           {{ block "main" . }}{{ end }}
         </div>
+        {{ if .Site.Params.socialshare }}
+          {{ partial "socialshare.html" . }}
+        {{ end }}
         {{ block "commentornotes" . }}   
           {{ partial "comments.html" . }}
         {{ end }}
@@ -112,8 +115,6 @@ function scrollFunction() {
   {{ with .Params.customfooter }}
 {{ . | safeHTML }}
 {{ end }}
-{{ if .Site.Params.socialshare }}
-  {{ partial "socialshare.html" . }}
-{{ end }}
+
 </body>
 </html>
