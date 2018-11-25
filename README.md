@@ -52,85 +52,19 @@
  ```
  
 ## How to configure?
- It is very simple. You can edit the example **config. toml** file from examplesite or below
+ It is very simple. You can edit the example **config. toml** file from examplesite.
  
 
-```bash
-baseurl = "https://example.com/"
-languageCode = "en-us"
-title = "Hugo W3 Simple Theme"
-theme = "hugo-w3-simple"
-disqusShortname = ""      # disqus_shortname
-googleAnalytics = ""      # UA-XXXXXXXX-X
-paginate = 12 #gridstyle use 3 column. so should be 3,6,9,12,15....
-hasCJKLanguage = true # has chinese/japanese/korean ? 
-
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 3
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 4
-
-[[menu.main]]
-    name = "All Posts"
-    url = "/allposts/"
-    weight = 5
-
-
-
-[params]
-    authorandlicense = true 
-    authorimgurl = "https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/exampleSite/images/johndoe.jpg" #if authorandlicense set true, this one must be set too
-    authorinfo = "<h4>Authored By John Doe</h4>"
-    licenseinfo = "<p class=\"w3-small\">John Doe, a good man living in the earth, loving building website with Hugo.<br>This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>" 
-    relatedPosts = true
-    backtotop = true
-    glowlogo = true # if want logo to have glowing style, set true.
-    scrollindicator = true # if need scroll indicator on the top, set true
-    gridstyle = true  # list post with grid style. If false then simple list
-    readingtime = true  #display reading time and word count
-    firstpic = true  # display first picture as thumbnail if no thumbnail set. For gridstyle only
-    socialshare = true
-    searchfunction = false #If you need search button and you have search function please set true
-    description = "Hugo W3 Simple Theme"
-    onesignalid = ""  #one signal push app id
-    logotext = "HUGO W3 SIMPLE" # logo text
-    footer = "&copy; [John Doe](https://johndoe.com) 2018 | [Github](https://github.com/johndoe) | [Twitter](https://twitter.com/johndoe)  | [RSS](/index.xml)"
-
-
-[params.social]  # Set your social account here, if you don't have some accounts just comment them
-    a-envelope = "mailto:your@email.com"
-    b-stack-overflow ="https://stackoverflow.com/users/12345678/john-doe"
-    c-twitter = "https://twitter.com/johndoe"
-    d-facebook = "https://www.facebook.com/johndoe"
-    e-github = "https://github.com/johndoe"
-    f-youtube = "https://www.youtube.com/channel/12345678"
-    g-linkedin = "https://www.linkedin.com/johndoe"
-    h-google = "https://plus.google.com/12345678"
-    i-github = "https://github.com/johndoe"
-    j-weibo = "https://weibo.com" 
-    k-weixin = "http://localhost:1313" 
-    l-tumblr = "https://www.tumblr.com/blog/johndoe"
-    m-instagram = "https://instagram.com/johndoe"
-    n-gitlab = "https://gitlab.com/johndoe"
-    o-pinterest = "https://www.pinterest.com/johndoe/"  
-    
-```    
+## Multilingual
+Hugo W3 Simple supports multilingual. example site includes both English and Chinese version. You should put your posts on `./content/{langcode}/` folder.
 
 ## Search Page
 
-To use search function, you need create `./content/search/index.md` file. Please see exampleSite folder.
+To use search function, you need create `./content/{langcode}/search/index.md` file. Please see exampleSite folder.
 
 ## All posts
 
-To use all posts function, you need create `./content/allposts/_index.md` file. Please see exampleSite folder.
+To use all posts function, you need create `./content/{langcode}/allposts/_index.md` file. Please see exampleSite folder.
 
 
 ## Favicon
@@ -154,6 +88,7 @@ Released under the [MIT](https://github.com/jesselau76/hugo-w3-simple/blob/maste
 - [Hugo Xmin](https://github.com/yihui/hugo-xmin)
 - [Even](https://github.com/olOwOlo/hugo-theme-even)
 - [Mediumish](https://github.com/lgaida/mediumish-gohugo-theme)
+
 
 
 
