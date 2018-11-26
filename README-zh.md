@@ -59,7 +59,7 @@ Hugo W3 Simple支持多语言站点. example site目录包括了英文和中文�
 
 如果要用sphinx或manticoresearch来实现站内搜索功能。需要建立一个 `./content/{langcode}/search/index.md` 文件。
 
-**注意：**不建议服务器支持HTML文件运行PHP语言，为安全考虑，请将Hugo生成的search/index.html更名为index.php再上传服务器。
+<b>注意</b>：为安全考虑，不建议服务器支持HTML文件运行PHP语言，请将Hugo生成的search/index.html更名为index.php再上传服务器。
 
 ## 全部帖子页面
 
