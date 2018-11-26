@@ -33,6 +33,8 @@
  - Multilingual.
  - Glowing style logo
  - Scroll indicator
+ - Lazy Load images -  loading images on websites asynchronously — that is, after the above-the-fold content is fully loaded, or even conditionally, only when they appear in the browser's viewport. This means that if users don't scroll all the way down, images placed at the bottom of the page won't even be loaded. Enable this function to make the page load very fast if it has lots of images. [Live Demo Here](https://jesselau.com/21-wordpress-plugins-activated-in-my-website/). This page includes 21 images. Before lazy load the page size is 854kb and load time is 3.5s.![Before lazy load](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/beforelazyload.png)After lazy load the page size is 524kb and load time is 2.8s
+![After lazy load](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/afterlazyload.png)
 
  ## Screenshot
 ### Grid style 
@@ -89,6 +91,7 @@ Released under the [MIT](https://github.com/jesselau76/hugo-w3-simple/blob/maste
 - [Hugo Xmin](https://github.com/yihui/hugo-xmin)
 - [Even](https://github.com/olOwOlo/hugo-theme-even)
 - [Mediumish](https://github.com/lgaida/mediumish-gohugo-theme)
+
 
 
 

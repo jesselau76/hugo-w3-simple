@@ -340,7 +340,7 @@ position: fixed;
 .thumb {
    position: relative;
    width: 100%;
-   padding-top: 75%; /* 4:3 Aspect Ratio */
+   padding-top: 66.66%; /* 3:2 Aspect Ratio */
    height: 0;
   overflow: hidden;
 

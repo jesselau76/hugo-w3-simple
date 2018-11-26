@@ -46,7 +46,19 @@
    
     <!-- Content -->
     <div class="w3-container">
-      {{ .Content }}
+      {{ if .Site.Params.lazyload }}
+        {{ $img := findRE "src=\"(.+?png|jpg|jpeg|gif|bmp)\"" .Content }}
+        {{ if gt (len $img) 1 }}
+          
+          {{ (.Content | replaceRE "src=\"(.+?png|jpg|jpeg|gif|bmp)\"" "src=\"/placeholder.svg\" data-src=\"$1\"") | safeHTML  }}
+        {{ else }}
+          {{ .Content }}
+        {{ end }}          
+                
+         
+      {{ else }}
+        {{ .Content }}
+      {{ end }}
     </div>
 
     

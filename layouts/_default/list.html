@@ -20,33 +20,33 @@
     <div class="w3-card-2 w3-hover-shadow " >
 
       {{ with .Params.thumbnail }}
-      
+      <div class="w3-hover-opacity thumb">
          {{ if eq ( $.Scratch.Get "novisual") 1 }}
-        <div class="w3-hover-opacity ">
-          <img src="placeholder.svg" data-src="{{ relURL . }}" alt="Thumbnail" />
+        
+          <img src="{{ "/placeholder.svg" | relURL }}" data-src="{{ relURL . }}" alt="Thumbnail" />
           {{ else }}
-           <div class="w3-hover-opacity ">
+           
             <img src="{{ relURL . }}" alt="Thumbnail" />
           {{ end }}
       </div>
       {{ else }}
         {{ if .Site.Params.firstpic}}
-          {{ if .Site.Params.lazyload | and (eq ( .Scratch.Get "novisual") 1) }}
+          
            {{ $img := findRE "<img .*?src=\"(.*?)\".*?>" .Content 1 }}
            {{ range $img }}
                 
-                <div class="w3-hover-opacity "><img src="placeholder.svg" data-src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail"/></div>
-           {{ end }}
-          {{ else }}
-            {{ $img := findRE "<img .*?src=\"(.*?)\".*?>" .Content 1 }}
-             {{ range $img }}
-                  
-                  <div class="w3-hover-opacity "><img src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail" /></div>
-             {{ end }}
+                <div class="w3-hover-opacity thumb ">
+                   {{ if eq ( $.Scratch.Get "novisual") 1 }}
+
+                      <img src="{{ "/placeholder.svg" | relURL }}" data-src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail"/></div>
+                    
+                    {{ else }}
+                      <img src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail" /></div>
+                    {{ end }}
                 
           {{ end }}
         {{ end }}
-  {{ end }}
+      {{ end }}
  
     <header class="w3-container wraptext w3-text-indigo">
       <h4><a href="{{ .URL }}">{{ .Title | markdownify }}</a></h4>
