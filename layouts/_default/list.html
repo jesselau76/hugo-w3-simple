@@ -10,39 +10,42 @@
 
 
 {{ range $i, $e:= $paginator.Pages }}
-	{{ if modBool $i 3 }}
-		<div class="w3-row  w3-section">
-	{{ end }}
-  {{ if gt $i 1 }}
-    {{ .Scratch.Set "novisual" 1 }}
+  {{ if modBool $i 3 }}
+    <div class="w3-row  w3-section">
+  {{ end }}
+  {{ if .Site.Params.lazyload | and (gt $i 1) }}
+    {{ $.Scratch.Set "novisual" 1 }}
   {{ end }}
   <div class="w3-col w3-container w3-section m12 l4 ">
     <div class="w3-card-2 w3-hover-shadow " >
-    	{{ with .Params.thumbnail }}
-	    <div class="w3-hover-opacity thumb">
-        {{ if .Site.Params.lazyload | and (eq ( .Scratch.Get "novisual") 1) }}
-        <img src="placeholder.svg" data-src="{{ relURL . }}" alt="Thumbnail" />
-        {{ else }}
-        <img src="{{ relURL . }}" alt="Thumbnail" />
-        {{ end }}
+
+      {{ with .Params.thumbnail }}
+      
+         {{ if eq ( $.Scratch.Get "novisual") 1 }}
+        <div class="w3-hover-opacity ">
+          <img src="placeholder.svg" data-src="{{ relURL . }}" alt="Thumbnail" />
+          {{ else }}
+           <div class="w3-hover-opacity ">
+            <img src="{{ relURL . }}" alt="Thumbnail" />
+          {{ end }}
       </div>
-	    {{ else }}
-  	    {{ if .Site.Params.firstpic}}
+      {{ else }}
+        {{ if .Site.Params.firstpic}}
           {{ if .Site.Params.lazyload | and (eq ( .Scratch.Get "novisual") 1) }}
-    	     {{ $img := findRE "<img .*?src=\"(.*?)\".*?>" .Content 1 }}
-        	 {{ range $img }}
+           {{ $img := findRE "<img .*?src=\"(.*?)\".*?>" .Content 1 }}
+           {{ range $img }}
                 
-          	    <div class="w3-hover-opacity thumb"><img src="placeholder.svg" data-src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail"/></div>
+                <div class="w3-hover-opacity "><img src="placeholder.svg" data-src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail"/></div>
            {{ end }}
           {{ else }}
             {{ $img := findRE "<img .*?src=\"(.*?)\".*?>" .Content 1 }}
              {{ range $img }}
                   
-                  <div class="w3-hover-opacity thumb"><img src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail" /></div>
+                  <div class="w3-hover-opacity "><img src="{{ replaceRE "<img .*?src=\"(.*?)\".*?>" "$1" . }}" alt="Thumbnail" /></div>
              {{ end }}
                 
           {{ end }}
-  	    {{ end }}
+        {{ end }}
   {{ end }}
  
     <header class="w3-container wraptext w3-text-indigo">
@@ -52,16 +55,16 @@
     </header>
 
     <div class="w3-container wraptext w3-white">
-    	<code> {{ .Date.Format "2006/01/02" }} </code>
+      <code> {{ .Date.Format "2006/01/02" }} </code>
             
           
-    	{{ if gt (len .Summary) 200 }}
+      {{ if gt (len .Summary) 200 }}
 
   
-  		<p>{{substr .Summary 0 200 }}...</p>
+      <p>{{substr .Summary 0 200 }}...</p>
   
   
-		{{ end }}
+    {{ end }}
       
     </div>
 
@@ -71,8 +74,8 @@
   </div>
   </div>
   {{ if or (modBool (add $i 1) 3) (ge (add $i 1) $paginator.Pages) }}
-		</div>
-	{{ end }}
+    </div>
+  {{ end }}
 
 {{ end }} 
 
