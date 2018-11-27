@@ -209,47 +209,45 @@ print(y["age"]) <br>
 
 {{< colorcode title="Code for quote shortcodes">}}  
 {{&lt; quote  &gt;}}<br>  
-&lt;p class=" w3-xxlarge"&gt;<br> 
+
     天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。<br> 
-&lt;/p&gt;<br> 
-&lt;p class="w3-right"&gt;--- 老子&lt;/p&gt;<br> 
+
 {{&lt; /quote &gt;}}  
 {{< /colorcode >}}  
-缺省宽度为100%
+缺省宽度为100%，不显示作者
 {{< quote  >}}  
-<p class=" w3-xxlarge">
+
      天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。
-</p><p class="w3-right">--- 老子</p>
+
 {{< /quote >}}  
 
-可以设置宽度百分比
+可以设置宽度百分比，设置作者信息
  {{< colorcode title="Code for quote shortcodes with % width">}}  
-{{&lt; quote width="38.2%"  &gt;}}<br>  
-&lt;p class=" w3-xxlarge"&gt;<br> 
+{{&lt; quote width="38.2%" author="老子"  &gt;}}<br>  
+
     天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。<br> 
-&lt;/p&gt;<br> 
-&lt;p class="w3-right"&gt;--- 老子&lt;/p&gt;<br> 
+
 {{&lt; /quote &gt;}}  
 {{< /colorcode >}}  
-{{< quote width="38.2%" >}}  
-<p class=" w3-xxlarge">
+{{< quote width="38.2%" author="老子" >}}  
+
      天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。
-</p><p class="w3-right">--- 老子</p>
+
 {{< /quote >}}   
 
 也可以直接设置px宽度
 
 {{< colorcode title="Code for quote shortcodes with px width">}}  
-{{&lt; quote width="300px"  &gt;}}<br>  
-&lt;p class=" w3-xxlarge"&gt;<br> 
+{{&lt; quote width="300px"  author="老子" &gt;}}<br>  
+
      天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。<br> 
-&lt;/p&gt;<br> 
-&lt;p class="w3-right"&gt;--- 老子&lt;/p&gt;<br> 
+
 {{&lt; /quote &gt;}}  
 {{< /colorcode >}}  
 
-{{< quote width="300px" >}}  
-<p class=" w3-xxlarge">
+{{< quote width="300px" author="老子" >}}  
+
      天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。
-</p><p class="w3-right">--- 老子</p>
+
 {{< /quote >}}   
+

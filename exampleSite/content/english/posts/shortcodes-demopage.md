@@ -196,49 +196,46 @@ We can display quotes with shortcodes
 
 {{< colorcode title="Code for quote shortcodes">}}  
 {{&lt; quote  &gt;}}<br>  
-&lt;p class=" w3-xlarge"&gt;<br> 
+
      Make it as simple as possible, but not simpler.<br> 
-&lt;/p&gt;<br> 
-&lt;p class="w3-right"&gt;--- Albert Einstein&lt;/p&gt;<br> 
+
 {{&lt; /quote &gt;}}  
 {{< /colorcode >}}  
-It will display quote with default width 100% style:  
+It will display quote with default width 100% style and no author:  
 {{< quote  >}}  
-<p class=" w3-xlarge">
+
      Make it as simple as possible, but not simpler.
-</p><p class="w3-right">--- Albert Einstein</p>
+
 {{< /quote >}}  
 
-You can also set width with shortcodes:
+You can also set width and author with shortcodes:
  {{< colorcode title="Code for quote shortcodes with % width">}}  
-{{&lt; quote width="38.2%"  &gt;}}<br>  
-&lt;p class=" w3-xlarge"&gt;<br> 
+{{&lt; quote width="61.8%"  author="Albert Einstein" &gt;}}<br>  
+
      Make it as simple as possible, but not simpler.<br> 
-&lt;/p&gt;<br> 
-&lt;p class="w3-right"&gt;--- Albert Einstein&lt;/p&gt;<br> 
+
 {{&lt; /quote &gt;}}  
 {{< /colorcode >}}  
-{{< quote width="38.2%" >}}  
-<p class=" w3-xlarge">
+{{< quote width="61.8%" author="Albert Einstein"  >}}  
+
      Make it as simple as possible, but not simpler.
-</p><p class="w3-right">--- Albert Einstein</p>
+
 {{< /quote >}}   
 
 Or you can set px to width
 
 {{< colorcode title="Code for quote shortcodes with px width">}}  
-{{&lt; quote width="300px"  &gt;}}<br>  
-&lt;p class=" w3-xlarge"&gt;<br> 
+{{&lt; quote width="300px" author="Albert Einstein"  &gt;}}<br>  
+
      Make it as simple as possible, but not simpler.<br> 
-&lt;/p&gt;<br> 
-&lt;p class="w3-right"&gt;--- Albert Einstein&lt;/p&gt;<br> 
+
 {{&lt; /quote &gt;}}  
 {{< /colorcode >}}  
 
-{{< quote width="300px" >}}  
-<p class=" w3-xlarge">
+{{< quote width="300px" author="Albert Einstein"  >}}  
+
      Make it as simple as possible, but not simpler.
-</p><p class="w3-right">--- Albert Einstein</p>
+
 {{< /quote >}}   
 
 ## Test first picture without thumbnail set

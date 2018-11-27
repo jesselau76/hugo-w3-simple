@@ -32,7 +32,7 @@
       {{ else }}
         {{ if .Site.Params.firstpic}}
           
-           {{ $img := findRE "(?i)<img .*?src=\"[^\"]*(png|jpg|jpeg|gif|bmp|svg)\".*?>" .Content 1 }}
+           {{ $img := findRE "(?i)<img .*?src\\s*=\\s*\"([^\"]*(png|jpg|jpeg|gif|bmp|svg))\".*?>" .Content 1 }}
            {{ range $img }}
                 
                 <div class="w3-hover-opacity thumb ">
