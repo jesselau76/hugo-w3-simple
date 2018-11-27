@@ -64,3 +64,6 @@ postsword:
 postssearch:
   other: "搜索帖子..."
 
+relatedposts:
+  other: "相关文章:"
+

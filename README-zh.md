@@ -30,6 +30,7 @@
  - 社交按钮.
  - 支持多语言.
  - 辉光式LOGO，可选
+ - Google Adsense autoads
  - Lazy Load图片 -  异步加载网站上的图像 - 也就是说先用一个极小的图像文件占住位置，只有当用户滑动屏幕到该图片出现的位置时，才调用真实的图片。 如果页面有很多图片，启用此功能可以使页面加载速度非常快。 [实例演示](https://jesselau.com/21-wordpress-plugins-activated-in-my-website/). 这个网页含有21个图片。不用lazy load前文件大小为854kb，加载时间3.5s.![Before lazy load](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/beforelazyload.png)使用lazy load后文件大小为524kb，加载时间就只有2.8s
 ![After lazy load](https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/images/afterlazyload.png)
 

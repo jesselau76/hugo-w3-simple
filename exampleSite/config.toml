@@ -92,6 +92,7 @@ contentDir = "content/chinese"
     searchfunction = true #If true, it will only display search button but real search function is not included in example site because it need server-side app. To see the demo please visit https://jesselau.com
     description = "Hugo W3 Simple Theme"
     onesignalid = ""  #one signal push app id
+    # adsenseid="ca-pub-123456789"
     logotext = "HUGO W3 SIMPLE" # logo text
     footer = "&copy; [John Doe](https://johndoe.com) 2018 | [Github](https://github.com/johndoe) | [Twitter](https://twitter.com/johndoe)  | [RSS](/index.xml)"
 

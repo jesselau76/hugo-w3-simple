@@ -62,3 +62,6 @@ postsword:
 
 postssearch:
   other: "Search Posts..."
+
+relatedposts:
+  other: "Related Articles:"
