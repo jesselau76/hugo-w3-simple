@@ -49,7 +49,7 @@
       {{ if .Site.Params.lazyload }}
         
 
-        {{ $regex := "src=\"(.+?)\"" }}
+        {{ $regex := "(?i)src=\"[^\"]*(png|jpg|jpeg|gif|bmp|svg)\"" }}
         {{ $img := findRE $regex .Content }}
 
         {{ if gt (len $img) 0 }}
