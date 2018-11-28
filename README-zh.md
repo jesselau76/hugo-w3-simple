@@ -5,6 +5,7 @@
 
 
 
+
 # Hugo W3 SIMPLE
 
 
@@ -18,7 +19,7 @@
  - W3 code color js - 也是小而快的代码高亮模块。 
  - Twitter Card
  - Google Analytics
- - Disqus评论系统
+ - Disqus 或isso评论系统，[isso中文安装教程](https://jesselau.com/install-isso-nginx-hugo/)
  - One Signal Push
  - 书签及共享按钮条，大屏幕时常位于左侧，中小屏幕位于帖子下方。
  - 当前版本四种快捷方式:Info, Warning, Colorcode, quote.  [演示](https://jesselau.com/hugo-w3-simple-shortcodes-demo/

@@ -20,7 +20,7 @@
  - W3 code color js - small and fast code highlight solution. 
  - Twitter Card
  - Google Analytics
- - Disqus
+ - Disqus or isso comment system
  - One Signal Push
  - Social share & Bookmark bar
  - Shortcodes:Info, Warning, Colorcode, quote.  [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)

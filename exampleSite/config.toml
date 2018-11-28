@@ -16,6 +16,8 @@ contentDir = "content/english"
       authorinfo = "<h4>Authored By John Doe</h4>"
       licenseinfo = "<p class=\"w3-small\">John Doe, a good man living on the earth, loving making website with hugo. This article is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/4.0/\" class=\"w3-text-white\">Creative Commons Attribution 4.0 International License</a>.</p>"
       logotext = "HUGO W3 SIMPLE" # logo text
+      isso_baseurl=""  #if you want to use isso as comment system,set your isso js baseurl here. It is like "https://isso.yourwebsite.com/" or "https://yourwebsite.com/isso/"
+      isso_langcode="en"
    
 [[languages.en.menu.main]]
     name = "About"
@@ -50,6 +52,8 @@ contentDir = "content/chinese"
       authorinfo = "<h4>本文由王一贴原创</h4>"
       licenseinfo = '<p class="w3-small">王一贴，曾记录于《红楼梦》第八十回人物。任何问题，一贴搞定.<br>本文采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" class="w3-text-white">知识共享署名 4.0 国际许可协议</a>进行许可。</p>'
       logotext = "王一贴的博客" # logo text
+      isso_baseurl=""  ##if you want to use isso as comment system,set your isso js baseurl here. It is like "https://isso.yourwebsite.com/" or "https://yourwebsite.com/isso/"
+      isso_langcode="zh"
 [[languages.zh-cn.menu.main]]
     name = "关于"
     url = "/zh-cn/about/"

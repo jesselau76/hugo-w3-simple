@@ -65,3 +65,6 @@ postssearch:
 
 relatedposts:
   other: "Related Articles:"
+
+issocomment:
+  other: "Post Your Comments Here:"
