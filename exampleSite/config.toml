@@ -18,6 +18,7 @@ contentDir = "content/english"
       logotext = "HUGO W3 SIMPLE" # logo text
       isso_baseurl=""  #if you want to use isso as comment system,set your isso js baseurl here. It is like "https://isso.yourwebsite.com/" or "https://yourwebsite.com/isso/"
       isso_langcode="en"
+      cookie_info = "This website uses cookies to ensure you get the best experience on our website. [Learn more](/privacy-policy/)"
    
 [[languages.en.menu.main]]
     name = "About"

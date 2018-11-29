@@ -9,7 +9,9 @@
 {{ . | safeHTML }}
 {{ end }}
 </head>
-<body class="w3-light-grey">
+<body {{ if .Site.Params.cookie_info }} onload="checkCookie()" {{ end }}
+
+class="w3-light-grey">
 
 
     
@@ -43,6 +45,65 @@
 
     
   </div>
+<!-- cookie bar -->
+  {{ with .Site.Params.cookie_info }} 
+  <div id="cookiebar" class="w3-bar w3-top w3-black w3-border   " >
+  <span onclick="gotitcookiebar()"
+  class="w3-button w3-small w3-green w3-right">Got it</span>
+  <span class="w3-bar-item w3-small">{{ . | markdownify  }}</span>
+   </div>
+
+    
+<script>
+function gotitcookiebar() {
+    var x =document.getElementById("cookiebar");
+    x.style.display = "none";
+var x = document.getElementsByTagName("BODY")[0];
+    x.style.paddingTop = "0px";
+    
+
+}
+
+
+    
+function checkCookie() {
+    var user=getCookie("cookiebardisplayed");
+    if (user == "") {
+        var x =document.getElementById("cookiebar");
+    x.style.display = "block";
+    var h = document.getElementById('cookiebar').clientHeight;
+    
+    var x = document.getElementsByTagName("BODY")[0];
+    x.style.paddingTop = h+"px";
+    setCookie("cookiebardisplayed","1",365);
+    } 
+}
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+    
+ 
+</script>   
+{{ end }}
 
   <!-- Back to top -->
     {{ if .Site.Params.backtotop }}

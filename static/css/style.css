@@ -76,6 +76,17 @@ em {
    font-style: normal;
    color:crimson;
 }
+/* cookie bar css */
+#cookiebar
+{
+display:none;
+}
+
+#cookiebar a
+{
+color: white;
+text-decoration: underline;
+}
 
 /* social share css */
 
