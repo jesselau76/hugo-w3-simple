@@ -9,7 +9,7 @@
 {{ . | safeHTML }}
 {{ end }}
 </head>
-<body {{ if .Site.Params.cookie_info }} onload="checkCookie()" {{ end }}
+<body }
 
 class="w3-light-grey">
 
@@ -101,7 +101,10 @@ function getCookie(cname) {
     }
     return "";
 }
-    
+
+document.addEventListener('DOMContentLoaded', function() {
+   checkCookie();
+}, false);    
  
 </script>   
 {{ end }}
@@ -225,6 +228,8 @@ function scrollFunction() {
 
 
 </script>
+
+
 
   {{ with .Params.customfooter }}
 {{ . | safeHTML }}
