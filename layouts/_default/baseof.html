@@ -48,9 +48,10 @@ class="w3-light-grey">
 <!-- cookie bar -->
   {{ with .Site.Params.cookie_info }} 
   <div id="cookiebar" class="w3-bar w3-top w3-black w3-border   " >
-  <span onclick="gotitcookiebar()"
-  class="w3-button w3-small w3-green w3-right">Got it</span>
+  
   <span class="w3-bar-item w3-small">{{ . | markdownify  }}</span>
+  <span onclick="gotitcookiebar()"
+  class="w3-button w3-small w3-green w3-right">{{ T "gotit" }}</span>
    </div>
 
     
@@ -188,6 +189,15 @@ function scrollFunction() {
     } else {
         document.getElementById("toc").style.display = "none";
     }
+    {{ end }}
+    <!-- cookie bar -->
+    {{ if .Site.Params.cookie_info }}
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        var x =document.getElementById("cookiebar");
+        x.style.display = "none";
+        var x = document.getElementsByTagName("BODY")[0];
+        x.style.paddingTop = "0px";
+    } 
     {{ end }}
 <!-- Back to top -->
     {{ if .Site.Params.backtotop }}
