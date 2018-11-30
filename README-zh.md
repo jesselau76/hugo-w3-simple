@@ -9,7 +9,7 @@
 # Hugo W3 SIMPLE
 
 
-**Hugo W3 Simple** 由 [Jesse Lau](https://jesselau.com)创作。根由原本打算做一个极简化的基于W3 CSS的Wordpress模板，却无意中搜索到了HUGO，从而被HUGO圈粉，转Wordpress到HUGO，顺便做了这个模板，并逐步改进。 
+**Hugo W3 Simple** 由 [Jesse Lau](https://jesselau.com)创作。根由是原本打算做一个极简化的基于W3 CSS的Wordpress模板，却无意中搜索到了HUGO，从而被HUGO圈粉，转Wordpress到HUGO，顺便做了这个模板，并逐步改进。 
 
 
 ## 主要特点:
@@ -26,7 +26,7 @@
  - Sphinx 或者Manticore search全文本搜索支持. 直接生成可被Sphinx 或者Manticore search检索的XML文件。[运行演示](https://jesselau.com/search/)
  - 滑屏时自动显示文章目录、进度条指示和回到顶端按钮
  - 网格化风格和极简化风格可切换。
- - 全部帖子可集中与一页，并带表格排序、标题过滤功能. [运行演示](https://jesselau.com/allposts/)
+ - 全部帖子可集中于一页，并带表格排序、标题过滤功能. [运行演示](https://jesselau.com/allposts/)
  - Google翻译.
  - 社交按钮.
  - 支持多语言.
