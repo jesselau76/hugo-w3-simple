@@ -367,3 +367,34 @@ position: fixed;
    
 }
 
+/* allowads */
+
+.adBanner {
+    
+    height: 1px;
+    width: 1px;
+}
+
+.allowads-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.allowads-overlay-content {
+    position: relative;
+    top: 25%;
+    width: 61.8%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left:auto;
+    margin-right:auto;
+    
+}

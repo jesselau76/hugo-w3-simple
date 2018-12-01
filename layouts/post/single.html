@@ -155,7 +155,49 @@
       </script>
   {{- end -}}
 
+   <!-- allowads -->
+  {{ if  (.Site.Params.allowads) }}
+
+      <div id="wrapads">
+        <div class="adBanner">
+         
+        </div>
+       </div>
+      
+      <div id="allowads" class="allowads-overlay">
   
+        <div class="allowads-overlay-content">
+        <div class="w3-panel w3-pink w3-large">
+        
+
+         <p> We notice you're using an adblocker.  If you like our webite please keep us running by whitelisting this site in your ad blocker. We’re serving quality, related ads only. Thank you!</p>
+         
+          <div class="w3-btn w3-green"  onclick="closeOverlay()">I've whitelisted your website.</div><br>
+          <div class="w3-button w3-small"  onclick="closeOverlay()">Not now</div>
+        </div>
+        </div>
+      </div>
+
+      <script>
+      function closeOverlay() {
+        document.getElementById("allowads").style.width = "0%";
+        document.getElementById("wrapads").style.height="1px";
+      }
+
+      function detectads() {
+      var h = document.getElementById("wrapads").clientHeight;
+
+      if (h==0){ document.getElementById("allowads").style.width = "100%";
+      }
+      }
+      
+
+     
+      
+      </script>
+
+  {{- end -}}
+
 
 
 

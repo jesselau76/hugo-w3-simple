@@ -98,6 +98,7 @@ contentDir = "content/chinese"
     description = "Hugo W3 Simple Theme"
     onesignalid = ""  #one signal push app id
     # adsenseid="ca-pub-123456789"
+    allowads = true
     logotext = "HUGO W3 SIMPLE" # logo text
     footer = "&copy; [John Doe](https://johndoe.com) 2018 | [Github](https://github.com/johndoe) | [Twitter](https://twitter.com/johndoe)  | [RSS](/index.xml)"
 

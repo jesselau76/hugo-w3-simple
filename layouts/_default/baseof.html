@@ -224,6 +224,14 @@ function scrollFunction() {
     
 
     {{ end }}
+
+    <!-- allowads -->
+    {{ if and (.Site.Params.allowads) (.IsPage) }}
+       if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
+          detectads();
+       } 
+
+    {{ end }}
 }
 
 
