@@ -1,7 +1,7 @@
 /* w3codecolor ver 1.31 by w3schools.com */
 /* add bash script color by jesselau.com*/
 function w3CodeColor() {
-  var x, i, j, k, l, modes = ["html", "js", "java", "css", "sql", "python", "bash"];
+  var x, i, j, k, l, modes = ["html", "js", "java", "css", "sql", "python", "bash", "go"];
   if (!document.getElementsByClassName) {return;}
   k = modes.length;
   for (j = 0; j < k; j++) {
@@ -52,6 +52,10 @@ function w3CodeColorize(x, lang) {
   var bashkeywordcolor = "mediumblue";
   var bashstringcolor = "brown";
   var bashnumbercolor = "red";  
+  var gocolor = "black";
+  var gokeywordcolor = "mediumblue";
+  var gostringcolor = "brown";
+  var gonumbercolor = "red";  
   if (!lang) {lang = "html"; }
   if (lang == "html") {return htmlMode(x);}
   if (lang == "css") {return cssMode(x);}
@@ -61,6 +65,7 @@ function w3CodeColorize(x, lang) {
   if (lang == "sql") {return sqlMode(x);}  
   if (lang == "python") {return pythonMode(x);}
   if (lang == "bash") {return bashMode(x);}
+  if (lang == "go") {return goMode(x);}
   return x;
   function extract(str, start, end, func, repl) {
     var s, e, d = "", a = [];
@@ -505,6 +510,39 @@ function w3CodeColorize(x, lang) {
   function bashKeywordMode(txt) {
     return "<span style=color:" + bashkeywordcolor + ">" + txt + "</span>";
   }
+
+  function goMode(txt) {
+    var rest = txt, done = "", sfnuttpos, dfnuttpos, compos, comlinepos, comhashpos, keywordpos, mypos, y;
+    y = 1;
+    while (y == 1) {
+      sfnuttpos = getPos(rest, "'", "'", goStringMode);
+      dfnuttpos = getPos(rest, '"', '"', goStringMode);
+      compos = getPos(rest, /\/\*/, "*/", commentMode);
+      comlinepos = getPos(rest, /\/\//, "<br>", commentMode);      
+      comhashpos = getPos(rest, "#", "<br>", commentMode);
+      numpos = getNumPos(rest, goNumberMode);
+      keywordpos = getKeywordPos("go", rest, goKeywordMode);      
+      if (Math.max(numpos[0], sfnuttpos[0], dfnuttpos[0], compos[0], comlinepos[0], comhashpos[0], keywordpos[0]) == -1) {break;}
+      mypos = getMinPos(numpos, sfnuttpos, dfnuttpos, compos, comlinepos, comhashpos, keywordpos);
+      if (mypos[0] == -1) {break;}
+      if (mypos[0] > -1) {
+        done += rest.substring(0, mypos[0]);
+        done += mypos[2](rest.substring(mypos[0], mypos[1]));
+        rest = rest.substr(mypos[1]);
+      }
+    }
+    rest = done + rest;
+    return "<span style=color:" + gocolor + ">" + rest + "</span>";
+  }
+  function goStringMode(txt) {
+    return "<span style=color:" + gostringcolor + ">" + txt + "</span>";
+  }
+  function goNumberMode(txt) {
+    return "<span style=color:" + gonumbercolor + ">" + txt + "</span>";
+  }
+  function goKeywordMode(txt) {
+    return "<span style=color:" + gokeywordcolor + ">" + txt + "</span>";
+  }
   function getKeywordPos(typ, txt, func) {
     var words, i, pos, rpos = -1, rpos2 = -1, patt;
     if (typ == "js") {
@@ -549,6 +587,11 @@ function w3CodeColorize(x, lang) {
       words = ["sudo", "git", "hugo", "cd", "rm", "mkdir", "delete", "find", "ssh", "scp", "nano", "server", "root", "nginx", "rsync", "bash",
       "chmod", "echo", "print", "apt-get", "ls", "which", "touch", "python", "go", "php", "chown", "du", "dhclient", "journalctl", "systemctl", "service", "tar",
       "zip", "unzip", "cp", "mv", "curl", "wget", "dpkg", "pip", "install", "pip3", "mysql"];
+    } else if (typ == "go") {
+      words = ["package", "import", "var", "const", "defer", "go", "goto", "return", "break", "continue", "fallthrough", "if", "else", "switch", "select", "case",
+      "default", "for", "range", "chan", "map", "bool", "string", "error", "int", "int8", "int16", "int32", "int64", "rune", "byte", "uint", "uint8",
+      "uint16", "uint32", "uint64", "uintptr", "float32", "float64", "complex64", "complex128", "append", "cap", "close", "complex", "copy", "delete",
+      "imag", "len", "make", "new", "panic", "print", "println", "real", "recover", "true", "false", "nil", "iota","func"];
     }
     for (i = 0; i < words.length; i++) {
       if (typ == "php" || typ == "sql") {

@@ -70,6 +70,12 @@ var x = document.getElementsByTagName("BODY")[0];
 function checkCookie() {
     var user=getCookie("cookiebardisplayed");
     if (user == "") {
+      setCookie("cookiebardisplayed","0",365);}
+
+    user=getCookie("cookiebardisplayed");
+    if (user =="0")
+    {
+
         var x =document.getElementById("cookiebar");
     x.style.display = "block";
     var h = document.getElementById('cookiebar').clientHeight;
@@ -78,6 +84,7 @@ function checkCookie() {
     x.style.paddingTop = h+"px";
     setCookie("cookiebardisplayed","1",365);
     } 
+    
 }
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
@@ -101,11 +108,10 @@ function getCookie(cname) {
     }
     return "";
 }
-
 document.addEventListener('DOMContentLoaded', function() {
-   checkCookie();
-}, false);    
- 
+    checkCookie();
+}, false);
+
 </script>   
 {{ end }}
 
@@ -200,6 +206,7 @@ function scrollFunction() {
         x.style.display = "none";
         var x = document.getElementsByTagName("BODY")[0];
         x.style.paddingTop = "0px";
+
     } 
     {{ end }}
 <!-- Back to top -->
