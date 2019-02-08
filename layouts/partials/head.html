@@ -36,9 +36,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
 
 <link rel="stylesheet" href="{{ "/css/w3.css" | relURL }}" />
-<!-- custom css -->
 
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+
+<!-- custom css -->
+{{ range .Site.Params.custom_css }}
+<link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
+{{ end }}
 
 <!-- One Signal Push -->
 {{ with .Site.Params.onesignalid }}        

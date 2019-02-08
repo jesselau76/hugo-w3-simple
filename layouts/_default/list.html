@@ -56,21 +56,14 @@
 
     <div class="w3-container wraptext w3-white">
       <code> {{ .Date.Format "2006/01/02" }} </code>
-            
-          
-      {{ if gt (len .Summary) 200 }}
-
-  
-      <p>{{substr .Summary 0 200 }}...</p>
-  
-  
-    {{ end }}
-      
+      <p>{{ .Summary }}</p>
     </div>
 
+    {{ if .Truncated }}
     <footer >
       <a href="{{ .URL }}"><button class="w3-button w3-blue w3-block w3-hover-green">{{ T "readMore" }}</button></a>
     </footer>
+    {{ end }}
   </div>
   </div>
   {{ if or (modBool (add $i 1) 3) (ge (add $i 1) $paginator.Pages) }}
