@@ -56,16 +56,16 @@
 
     <div class="w3-container wraptext w3-white">
       <code> {{ .Date.Format "2006/01/02" }} </code>
-            
-          
-      {{ if gt (len .Summary) 200 }}
-
-  
-      <p>{{substr .Summary 0 200 }}...</p>
-  
-  
-    {{ end }}
       
+      <p>
+        {{ with .Description }}
+        {{ $.Scratch.Set "summary" (markdownify .) }}
+      {{ else }}
+        {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>(.|\n)*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | truncate (default 200 .Site.Params.summary_length) (default " &hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
+      {{ end }}
+      {{ $.Scratch.Get "summary" }}
+      </p>
+
     </div>
 
     <footer >
