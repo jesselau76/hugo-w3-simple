@@ -7,6 +7,7 @@
 
 
 
+
 # Hugo W3 SIMPLE
 
 
@@ -26,7 +27,7 @@
  - 当前版本四种快捷方式:Info, Warning, Colorcode, quote.  [演示](https://jesselau.com/hugo-w3-simple-shortcodes-demo/
  - Sphinx 或者Manticore search全文本搜索支持. 直接生成可被Sphinx 或者Manticore search检索的XML文件。[运行演示](https://jesselau.com/search/)
  - 滑屏时自动显示文章目录、进度条指示和回到顶端按钮
- - 网格化风格和极简化风格可切换。
+ - 全部列表式风格、网格化风格和极简化风格，三种风格可切换。
  - 全部帖子可集中于一页，并带表格排序、标题过滤功能. [运行演示](https://jesselau.com/allposts/)
  - Google翻译.
  - 社交按钮.
