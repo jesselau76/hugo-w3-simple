@@ -5,6 +5,7 @@
 
 
 
+
 # Hugo W3 SIMPLE
 
 [Demo](https://themes.gohugo.io/theme/hugo-w3-simple/) | [Live](https://jesselau.com/) | [中文说明](https://github.com/jesselau76/hugo-w3-simple/blob/master/README-zh.md)
@@ -26,7 +27,7 @@
  - Shortcodes:Info, Warning, Colorcode, quote.  [Demo Here](https://jesselau.com/w3-simple-shortcodes-demo/)
  - Sphinx or Manticore search supported. Output xml file which can be indexed by sphinx and manticore search. Example site can not include search function because it need server-side setting. [Live Search function Demo Here](https://jesselau.com/search/)
  - Table of content and back to top button on scroll.
- - Grid style and simple list style.
+ - Alllist, Grid style and simple list style.
  - All posts in one page. With a filterable, sortable and responsive table powered by w3.js. [Live Demo Here.](https://jesselau.com/en/allposts/)
  - Google translate.
  - Social icon.

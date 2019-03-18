@@ -22,6 +22,11 @@
 <div class="w3-content">
     
       <div>
+        {{ if and .IsHome .Site.Params.welcomemessage }}
+          <div class="w3-card-4 w3-container" >
+            {{ .Content | markdownify }}
+          </div>
+        {{ end }}
         <div id="content" >
           {{ block "main" . }}{{ end }}
         </div>
@@ -189,6 +194,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   <!-- TOC -->
+    {{ if not .IsHome }}
     {{ if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")  }}
     
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -196,6 +202,7 @@ function scrollFunction() {
     } else {
         document.getElementById("toc").style.display = "none";
     }
+    {{ end }}
     {{ end }}
     <!-- cookie bar -->
     {{ if .Site.Params.cookie_info }}

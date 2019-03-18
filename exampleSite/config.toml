@@ -80,6 +80,7 @@ contentDir = "content/chinese"
 
 
 [params]
+    welcomemessage = false #if set true. The home page will display the content of _index.md 
     authorandlicense = true 
     authorimgurl = "https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/exampleSite/images/johndoe.jpg" #if authorandlicense set true, this one must be set too
     
@@ -88,6 +89,7 @@ contentDir = "content/chinese"
     lazyload = true  #if set true, lazy load images on websites asynchronously — that is, after the above-the-fold content is fully loaded, or even conditionally, only when they appear in the browser's viewport. 
     glowlogo = true # if want logo to have glowing style, set true.
     scrollindicator = true # if need scroll indicator on the top, set true
+    allliststyle = false  # list post with sortable all list style. If false then gridstyle or simple style
     gridstyle = true  # list post with grid style. If false then simple list
     readingtime = true  #display reading time
     firstpic = true  # display first picture as thumbnail if no thumbnail set. For gridstyle only
