@@ -12,11 +12,11 @@
 {{ .Hugo.Generator }}
 {{ if .IsHome }}
 
-    {{ $.Scratch.Set "theTitle" .Site.Title }}
+    {{ $.Scratch.Set "theTitle" .Site.Params.Title }}
 {{else}}
-    {{ $.Scratch.Add "theTitle" .Title}}
+    {{ $.Scratch.Set "theTitle" .Title}}
     {{ $.Scratch.Add "theTitle" " • "}}
-    {{ $.Scratch.Add "theTitle" .Site.Title}}
+    {{ $.Scratch.Add "theTitle" .Site.Params.Title}}
 {{ end }}
 <title>{{ $.Scratch.Get "theTitle" }}</title>
 {{ with .Site.Params.meta.description }}<meta name="description" content="{{ . }}">{{ end }}
