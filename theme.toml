@@ -8,7 +8,7 @@ description = "A simple theme for Hugo, powered by W3.css"
 homepage = "https://github.com/jesselau76/hugo-w3-simple"
 tags = ["minimal", "blog", "search", "clean", "simple", "starter", "minimalist","Responsive", "Disqus", "font-awesome","syntax highlighting", "Multilingual", "Google Analytics"]
 features = ["blog", "syntax highlighting"]
-min_version = "0.41"
+min_version = "0.57"
 
 [author]
   name = "Jesse Lau"

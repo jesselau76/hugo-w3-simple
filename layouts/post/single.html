@@ -131,12 +131,12 @@
     <div class="w3-content" > 
       <div class="w3-bar w3-section">
 	     {{ with .NextInSection }}
-	      <a  href="{{ .URL }}" class="w3-btn w3-text-indigo w3-hover-green">
+	      <a  href="{{ .Permalink }}" class="w3-btn w3-text-indigo w3-hover-green">
 	          &#10094; {{ .Title }}
 	      </a>
 	    {{- end }}
 	    {{ with .PrevInSection }}
-	      <a class="w3-btn w3-right w3-text-indigo w3-hover-green" href="{{ .URL }}">
+	      <a class="w3-btn w3-right w3-text-indigo w3-hover-green" href="{{ .Permalink }}">
 	       {{ .Title }} &#10095;
 	      </a>
 	    {{- end }}
