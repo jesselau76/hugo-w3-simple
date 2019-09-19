@@ -90,7 +90,6 @@
                
       </header>
 
-<<<<<<< HEAD
     <div class="w3-container wraptext w3-white">
       <code> {{ .Date.Format "2006/01/02" }} </code>
       
@@ -104,21 +103,6 @@
       </p>
 
     </div>
-=======
-      <div class="w3-container wraptext w3-white">
-        <code> {{ .Date.Format "2006/01/02" }} </code>
-              
-            
-        {{ if gt (len .Summary) 200 }}
-
-    
-        <p>{{substr .Summary 0 200 }}...</p>
-    
-    
-      {{ end }}
-        
-      </div>
->>>>>>> dev
 
       <footer >
         <a href="{{ .Permalink }}"><button class="w3-button w3-blue w3-block w3-hover-green">{{ T "readMore" }}</button></a>
