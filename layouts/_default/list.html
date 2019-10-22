@@ -90,7 +90,7 @@
                
       </header>
 
-<<<<<<< HEAD
+
     <div class="w3-container wraptext w3-white">
       <code> {{ .Date.Format "2006/01/02" }} </code>
       
@@ -104,21 +104,8 @@
       </p>
 
     </div>
-=======
-      <div class="w3-container wraptext w3-white">
-        <code> {{ .Date.Format "2006/01/02" }} </code>
-              
-            
-        {{ if gt (len .Summary) 200 }}
 
-    
-        <p>{{substr .Summary 0 200 }}...</p>
-    
-    
-      {{ end }}
-        
-      </div>
->>>>>>> dev
+     
 
       <footer >
         <a href="{{ .Permalink }}"><button class="w3-button w3-blue w3-block w3-hover-green">{{ T "readMore" }}</button></a>
@@ -155,10 +142,10 @@
     <div class="w3-bar w3-section w3-hide-large w3-hide-medium">
           
     {{ with $paginator.Prev -}}
-    <a href="{{ .Permalink }}" class="w3-btn w3-text-indigo w3-hover-green">&#10094; Previous</a>
+    <a href="{{ .URL }}" class="w3-btn w3-text-indigo w3-hover-green">&#10094; Previous</a>
       {{- end }}
       {{ with $paginator.Next -}}
-    <a href="{{ .Permalink }}" class="w3-btn w3-right w3-text-indigo w3-hover-green">Next &#10095;</a>
+    <a href="{{ .URL }}" class="w3-btn w3-right w3-text-indigo w3-hover-green">Next &#10095;</a>
       {{- end }}
   </div>
   <nav class="w3-center w3-hide-small">{{ template "_internal/pagination.html" . }}</nav>
