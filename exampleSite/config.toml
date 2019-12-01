@@ -7,7 +7,8 @@ disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 paginate = 12 #gridstyle use 3 column. so should be 3,6,9,12,15....
 hasCJKLanguage = true # has chinese/japanese/korean ? 
-
+[markup.goldmark.renderer]
+unsafe= true
 [languages.en]
 weight = 0
 languageName = "English"

@@ -1,11 +1,7 @@
 {{ define "main" -}}
  <div class="w3-content w3-card-4" >
-{{ if not .IsHome }}
-    <h1 class="w3-center">{{ .Title | markdownify }}</h1>
-    
-   
-{{ end }}
-{{ $paginator := .Paginate (where .RegularPages "Section" "!=" "") }}
+
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "!=" "") }}
 
 
 
