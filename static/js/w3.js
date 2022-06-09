@@ -210,8 +210,8 @@ w3.sortHTMLbyNumber = function(id, sel, sortvalue) {
             v1 = b[ii].innerHTML.toLowerCase();
             v2 = b[ii + 1].innerHTML.toLowerCase();
           }
-          var i1 = parseInt(v1, 10);
-          var i2 = parseInt(v2, 10);
+          var i1 = parseFloat(v1);
+          var i2 = parseFloat(v2);
           if ((j == 0 && (i1 > i2)) || (j == 1 && (i1 < i2))) {
             bytt = 1;
             break;
