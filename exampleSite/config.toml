@@ -83,7 +83,7 @@ contentDir = "content/chinese"
 
 
 [params]
-    welcomemessage = false #if set true. The home page will display the content of _index.md 
+    welcomemessage = false #if set true. The home page will display the content of /content/english/_index.md 
     authorandlicense = true 
     authorimgurl = "https://raw.githubusercontent.com/jesselau76/hugo-w3-simple/master/exampleSite/images/johndoe.jpg" #if authorandlicense set true, this one must be set too
     
